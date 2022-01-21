@@ -64,7 +64,8 @@ li{
 }
 
 table{
-    border-color: black;
+    border-collapse: collapse;
+	border-color: black;
 	background-color: #5194a0;
     color: #fffff0;
     margin-top: 20px;
