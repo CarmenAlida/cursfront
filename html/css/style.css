@@ -40,8 +40,8 @@ img{
 }
 
 nav{
-	
-	background-color: #92D8FF;
+	margin: auto;
+	width: 100%;
 	padding: 0px;	
 	
 }
@@ -64,7 +64,8 @@ li{
 }
 
 table{
-    background-color: #5194a0;
+    border-color: black;
+	background-color: #5194a0;
     color: #fffff0;
     margin-top: 20px;
     text-align: center;
