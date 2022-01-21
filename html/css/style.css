@@ -3,12 +3,14 @@ h1{
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 38px;
+	
 }
 h3{
 	color: rgb(131, 131, 151);
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 24px;
+	
 }
 h4{
 	color: rgb(17, 99, 119);
@@ -23,15 +25,22 @@ p{
 	font-family: 'Acme', sans-serif;
 	font-size: 12px;
 }
+
+div{
+	align-content: center;
+	text-align: center;
+}
 	
 img{
-	
+	width: 30%;
+	height: ;
 	border: 1px solid #cccccc;
 	margin-top: 5px;
 	
 }
 
 nav{
+	
 	background-color: #92D8FF;
 	padding: 0px;	
 	
@@ -45,6 +54,7 @@ ul{
 }
 
 li{
+	text-align: center;
 	color: #5194a0;
 	font-size: 20px;
 	float: left;
