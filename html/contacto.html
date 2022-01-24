@@ -15,54 +15,56 @@
         <h4>Datos Básicos</h4>
         <form>
             <label for="fname">Nombres:</label>
-            <input type="text" id="fname" name="fname">
+            <input type="text" id="fname" name="fname">&nbsp;&nbsp;&nbsp;
             <label for="lname">Primer Apellido:</label>
-            <input type="text" id="lname" name="lname">
+            <input type="text" id="lname" name="lname">&nbsp;&nbsp;&nbsp;
             <label for="lname">Segundo Apellido:</label>
             <input type="text" id="lname" name="lname"><br><br>
             <label for="documento">Documento:</label>
-            <select id="documento" name="documento">
+            <select id="documento" name="documento">&nbsp;&nbsp;&nbsp;
                 <option value="dni">DNI</option>
                 <option value="nie">NIE</option><br>
                 <option value="pasaporte">Pasaporte</option><br>
-                <label for="fname">Número de Documento:</label><br>
-                <input type="text" id="numerod" name="numerod"><br>
-                <p>Eres:
-                    <input type="radio" id="html" name="sexo" value="mujer">
-                    <label for="html">Mujer</label>
-                    <input type="radio" id="css" name="sexo" value="hombre">
-                    <label for="css">Hombre</label>
-                    <label for="date">Fecha de Nacimiento:</label>
+                <label for="fname">Número de Documento:</label>
+                <input type="text" id="numerod" name="numerod">&nbsp;&nbsp;&nbsp;
+                <label for="date">Fecha de Nacimiento:</label>
                     <input type="date"><br><br>
+                <p>Eres:</p>
+                    <input type="radio" id="mujer" name="sexo" value="mujer">
+                    <label for="html">Mujer</label>&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="hombre" name="sexo" value="hombre">
+                    <label for="css">Hombre</label>
+                    
                 <h4>Datos de Contacto</h4>
                 <label for="fname">Dirección de Correo:</label>
-                <input type="text" id="fname" name="fname">
+                <input type="text" id="fname" name="fname">&nbsp;&nbsp;&nbsp;
                 <label for="phone">Teléfono</label>
-                <input type="tel" id="phone" name="phone" value="000 00 00 00"
+                <input type="tel" id="phone" name="phone" value="000000000"
                 pattern="[1]{9}"><br>
 
-                    <p>Vives en Barcelona:
-                        <input type="radio" id="bcn" name="bcn" value="bcn">
-                        <label for="bcn">SI</label>
-                        <input type="radio" id="bcn" name="bcn" value="bcn">
-                        <label for="bcn">NO</label><br><br>
-                        <label for="fname">Via:</label>
-                        <input list="via">
-                        <datalist id="via">
-                            <option value="Avenida">
-                            <option value="Calle">
-                            <option value="Carretera">
-                        </datalist>
-                        <label for="fname">Dirección:</label>
-                        <input type="text" id="direccion" name="direccion">
-                        <label for="fname">Número:</label>
-                        <input type="number" id="number" name="number"><br><br>
-                        <label for="fname">Piso:</label>
-                        <input type="text" id="piso" name="piso">
-                        <label for="fname">Puerta:</label>
-                        <input type="number" id="puerta" name="puerta"><br><br>
-
-                        <input type="submit" value="ENVIAR">
+                <p>Vives en Barcelona: </p>
+                <input type="radio" id="bcn" name="bcn" value="si">
+                <label for="bcn">SI</label>&nbsp;&nbsp;&nbsp;
+                <input type="radio" id="bcn" name="bcn" value="no">
+                <label for="bcn">NO</label><br><br>
+                <label for="fname">Via:</label>
+                <input list="via">
+                <datalist id="via">
+                    <option value="Avenida">
+                    <option value="Calle">
+                    <option value="Carretera">
+                </datalist>&nbsp;&nbsp;&nbsp;
+                <label for="fname">Dirección:</label>
+                <input type="text" id="direccion" name="direccion">&nbsp;&nbsp;&nbsp;
+                <label for="fname">Número:</label>
+                <input type="number" id="number" name="number">&nbsp;&nbsp;&nbsp;
+                <label for="fname">Piso:</label>
+                <input type="number" id="number" name="number"><br><br>
+                <label for="fname">Puerta:</label>
+                <input type="text" id="puerta" name="puerta">&nbsp;&nbsp;&nbsp;
+                <label for="fname">CP:</label>
+                <input type="text" id="CP" name="CP"><br><br>
+                <input type="submit" value="ENVIAR">
         </form>
     </div>
 </body>
