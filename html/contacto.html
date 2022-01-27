@@ -8,11 +8,12 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
     <title>Contacto</title>
 </head>
+
 <body>
     <div>
         <h1>Contactanos</h1>
         <h3>Para mayor información rellena el siguiente formulario</h3>
-        <h4>Datos Básicos</h4>
+        <h4>Datos de Contacto</h4>
         <form>
             <label for="fname">Nombres:</label>
             <input type="text" id="fname" name="fname">&nbsp;&nbsp;&nbsp;
@@ -28,19 +29,16 @@
                 <label for="fname">Número de Documento:</label>
                 <input type="text" id="numerod" name="numerod">&nbsp;&nbsp;&nbsp;
                 <label for="date">Fecha de Nacimiento:</label>
-                    <input type="date"><br><br>
-                <p>Eres:</p>
-                    <input type="radio" id="mujer" name="sexo" value="mujer">
-                    <label for="html">Mujer</label>&nbsp;&nbsp;&nbsp;
-                    <input type="radio" id="hombre" name="sexo" value="hombre">
-                    <label for="css">Hombre</label>
-                    
-                <h4>Datos de Contacto</h4>
+                <input type="date"><br><br>
+                <label for="sexo">Eres:</label>
+                <input type="radio" id="mujer" name="sexo" value="mujer">
+                <label for="html">Mujer</label>&nbsp;&nbsp;&nbsp;
+                <input type="radio" id="hombre" name="sexo" value="hombre">
+                <label for="css">Hombre</label><br><br>
                 <label for="fname">Dirección de Correo:</label>
                 <input type="text" id="fname" name="fname">&nbsp;&nbsp;&nbsp;
-                <label for="phone">Teléfono</label>
-                <input type="tel" id="phone" name="phone" value="000000000"
-                pattern="[1]{9}"><br>
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" value="000000000" pattern="[1]{9}"><br>
 
                 <p>Vives en Barcelona: </p>
                 <input type="radio" id="bcn" name="bcn" value="si">
@@ -67,6 +65,17 @@
                 <input type="submit" value="ENVIAR">
         </form>
     </div>
+    <footer>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="presentacio.html" target="_blank">Presentación</a> </li>
+            <li><a href="precios.html" target="_blank">Precios</a> </li>
+            <li><a href="ubicacion.html" target="_blank">Ubicación</a> </li>
+            <li><a href="contacto.html" target="_blank">Contactanos</a> </li>
+        </ul>
+    </nav>
+    </footer>
 </body>
 
 </html>
