@@ -15,11 +15,16 @@ body {
 
 .column {
     float: left;
-    width: 33.33%;
+    width: 20%;
     padding: 10px;
     height: 300px;
 }
-
+.column1 {
+    float: left;
+    width: 60%;
+    padding: 10px;
+    height: 300px;
+}
 .footer {
     background-color: pink;
     padding: 15px;

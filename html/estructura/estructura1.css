@@ -1,15 +1,16 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
-
+    width: 950px;
 
 }
 
-th {
-    border: 1px solid black;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-right: 80px;
+.inline-block {
+    display: inline-block;
+    width: 400px;
+    border: solid;
+    padding: 10px;
 }
+
 
 .content {
     width: 90%;
@@ -42,19 +43,16 @@ span.b {
 }
 
 .div2 {
-    float: left;
+    float: right;
     padding: 10px;
     background-color: cornflowerblue;
-    width: 30%;
+    width: 35%;
 }
 
-section {
-    width: 60%;
-    height: 30px;
-    display: flex;
-    
-}
-
-.div3{
-    padding: 20px;
+.div3 {
+    display: block;
+    width: 400px;
+    padding: 10px;
+    float: left;
+    padding: 10px;
 }
