@@ -1,9 +1,25 @@
-
-
-li{
-    float: left;
-    padding: 4%;
+ul{
     background-color: black;
-    color: white;
-    text-decoration: none;
+    overflow: hidden;
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: center;
 }
+
+li {
+    float: left;
+    list-style-type:none;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 26px;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+li a:hover {
+    background-color: #f8f5f5;
+    color: black;
+  }

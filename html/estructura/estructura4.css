@@ -1,3 +1,20 @@
-p {
-    color: rgb(143, 230, 73);
+*{
+    text-align: center;
 }
+
+.div1 {
+    padding: 1px;
+    background-color: rgba(9, 76, 97);
+    position: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 22px;
+    color: white;
+}
+.div2 {
+    padding: 1px;
+    position: absolute;
+    left: 35%;
+    top: 110px;
+    text-align: center;
+}
+

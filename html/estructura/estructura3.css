@@ -1,3 +1,13 @@
-p{
-    color: saddlebrown;
-}
+ul {
+    list-style: none;
+  }
+  
+  ul li::before {
+    content: "\2022";
+    color: rgb(66, 136, 216);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    padding: 1%;
+  }

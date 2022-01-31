@@ -1,6 +1,60 @@
-p {
-    color: darkcyan;
+* {
+    font-family: Arial, Helvetica, sans-serif;
+
+
 }
 
+th {
+    border: 1px solid black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 80px;
+}
 
-flex-wra
+.content {
+    width: 90%;
+    height: 40px;
+    border: 2px solid black;
+    margin-top: 10px;
+}
+
+span.a {
+    display: inline-block;
+    width: 60%;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+span.b {
+    display: inline-block;
+    width: 30%;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.div1 {
+    float: left;
+    padding: 10px;
+    border: 1px solid rgb(80, 77, 77);
+    width: 60%;
+}
+
+.div2 {
+    float: left;
+    padding: 10px;
+    background-color: cornflowerblue;
+    width: 30%;
+}
+
+section {
+    width: 60%;
+    height: 30px;
+    display: flex;
+    
+}
+
+.div3{
+    padding: 20px;
+}
