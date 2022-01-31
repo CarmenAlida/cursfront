@@ -9,12 +9,13 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 22px;
     color: white;
+    
 }
 .div2 {
     padding: 1px;
     position: absolute;
     left: 35%;
-    top: 110px;
+    top: 100px;
     text-align: center;
 }
 
