@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    border: 0px;
+}
+
+body{
+    background: aqua;
+    padding: 1em;
+}
+.container{
+    background-color: cornflowerblue;
+    border: 15px blue;
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.item{
+    padding: 2em;
+    border: 5px solid blue;
+    font-size: 1em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

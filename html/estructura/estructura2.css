@@ -19,16 +19,25 @@ body {
     padding: 10px;
     height: 300px;
 }
+
 .column1 {
     float: left;
     width: 60%;
     padding: 10px;
     height: 300px;
 }
+
 .footer {
-    background-color: pink;
     padding: 15px;
     text-align: center;
-  }
+    background: -moz-linear-gradient(pink);
+}
 
- 
+@media screen and (max-width:632px) {
+    .column,
+    .column1 {
+        width: 100%;
+        text-align: center;
+        font-size: 2em;
+    }
+}

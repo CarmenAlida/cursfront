@@ -4,6 +4,7 @@ ul{
     border-collapse: collapse;
     border: 1px solid black;
     text-align: center;
+    
 }
 
 li {
@@ -14,7 +15,7 @@ li {
 li a {
     display: block;
     color: white;
-    padding: 26px;
+    padding: 16px;
     text-decoration: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
