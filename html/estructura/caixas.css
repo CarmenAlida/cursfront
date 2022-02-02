@@ -24,3 +24,27 @@ body{
     font-size: 1em;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.item1{
+    order: 5;
+    flex-grow: 1;
+}
+
+.item2{
+    order: 3;
+    flex-grow: 5;
+}
+
+.item3{
+    order: 4;
+    flex-grow: 1;
+}
+.item4{
+    order: 2;
+    flex-grow: 1;
+}
+
+.item5{
+    order: 1;
+    flex-grow: 1;
+}
