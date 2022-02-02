@@ -1,0 +1,40 @@
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.padre{
+
+}
+    .header{
+        background: dimgrey;
+    }
+
+        .menu{
+            background: gray;
+        }
+
+            .logo{
+                background: lightgray;
+            }
+
+            .nav{
+                background: lightgray;
+            }
+
+            .social{
+                background: lightgray;
+            }
+
+        .texto-principal{
+            background: whitesmoke;
+        }
+
+    .section{
+        background: dimgrey;
+    }
+
+    .footer{
+        background: dimgrey;
+    }
