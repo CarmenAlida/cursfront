@@ -1,17 +1,23 @@
 *{
     margin: 10px;
-    padding: 10px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
 .padre{
-    
+
     display: flex;
     flex-flow: column nowrap;
-
 }
     .header{
-        background: url(img/tortuga.jpeg);
+        background: url(img/losroques.jpg);
         background-position: center;
         background-attachment: contain;
         background-size: cover;
@@ -20,37 +26,58 @@
     }
 
         .menu{
-            background: gray;
+            background: rgba(0, 0, 0, .1);
             display: flex;
             flex-flow: row nowrap;
-            height: 100px;
+            height: 60px;
             align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, .5);
         }
 
             .logo{
-                background: lightgray;
                 flex:1 1 auto;
-                height: 30px;
             }
+                .logo a{
+                    color: white;
+                    font-size: 30px;
+                }
+                .logo a:hover{
+                    color: black;
+                }
 
             .nav{
-                background: lightgray;
-                flex:5 1 auto;
-                height: 30px;
+                flex:5 1 auto; 
             }
+                .nav a{
+                    color: white;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    padding: 0 10px;
+                    letter-spacing: 2px;
+                }
+                .nav a:hover{
+                    color: #000;
+                }
 
             .social{
-                background: lightgray;
                 flex:1 1 auto;
-                height: 30px;
+                display: flex;
             }
-
+                .social a{
+                    font-size: 18px;
+                    color: white;
+                    padding: 0 5px;
+                }
+                .social a:hover{
+                    color: black;
+                } 
         .texto-principal{
-            background: whitesmoke;
+            color: seashell;
+            text-align: center;
         }
 
             h1{
-                background: #000;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             }
 
 
@@ -60,6 +87,7 @@
     .section{
         background: black;
         display: flex;   
+        
     }
         .articulos{
             background: blanchedalmond;
@@ -69,17 +97,19 @@
         }
 
             .article{
-                background: rosybrown;
+                background: rgb(10, 122, 173);
                 flex: 1 1 40%;
             }
             .navegacion{
-                background: brown;
+                background: rgb(64, 178, 223);
                 flex: 1 1 100%;
+                text-align: center;
             }
         
         .aside{
-            background: salmon;
+            background: rgb(7, 135, 167);
             flex:1 1 auto;
+            text-align: center;
         }
 
             .publicidad{
@@ -87,7 +117,7 @@
             }
 
     .footer{
-        background: dimgrey;
+        background: rgb(8, 57, 163);
         display: flex;
         justify-content: center;
     }
