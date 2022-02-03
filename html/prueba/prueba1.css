@@ -5,36 +5,121 @@
 }
 
 .padre{
+    
+    display: flex;
+    flex-flow: column nowrap;
 
 }
     .header{
-        background: dimgrey;
+        background: url(img/tortuga.jpeg);
+        background-position: center;
+        background-attachment: contain;
+        background-size: cover;
+        display: flex;
+        flex-flow: column nowrap;
     }
 
         .menu{
             background: gray;
+            display: flex;
+            flex-flow: row nowrap;
+            height: 100px;
+            align-items: center;
         }
 
             .logo{
                 background: lightgray;
+                flex:1 1 auto;
+                height: 30px;
             }
 
             .nav{
                 background: lightgray;
+                flex:5 1 auto;
+                height: 30px;
             }
 
             .social{
                 background: lightgray;
+                flex:1 1 auto;
+                height: 30px;
             }
 
         .texto-principal{
             background: whitesmoke;
         }
 
+            h1{
+                background: #000;
+            }
+
+
+
+
+
     .section{
-        background: dimgrey;
+        background: black;
+        display: flex;   
     }
+        .articulos{
+            background: blanchedalmond;
+            flex:2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+            .article{
+                background: rosybrown;
+                flex: 1 1 40%;
+            }
+            .navegacion{
+                background: brown;
+                flex: 1 1 100%;
+            }
+        
+        .aside{
+            background: salmon;
+            flex:1 1 auto;
+        }
+
+            .publicidad{
+                background: silver;
+            }
 
     .footer{
         background: dimgrey;
+        display: flex;
+        justify-content: center;
     }
+
+        .pie{
+            background: skyblue;
+            width: 300px; 
+        }
+
+    @media all and (max-width: 800px){
+    .section{
+        flex-direction: column;    
+    }   
+    .menu{
+        flex-direction: column;
+        height: auto;
+    }
+    .aside{
+        display: flex;
+        justify-content: center;
+        }
+    }
+
+    @media all and (max-width: 600px){
+        .articulos{
+            flex-direction: column;
+        }
+    }
+
+    @media all and (max-width: 600px){
+        .aside{
+            flex-direction: column;
+        }
+    }
+    
