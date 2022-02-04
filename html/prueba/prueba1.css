@@ -1,5 +1,5 @@
 *{
-    margin: 10px;
+    margin: 5px;
     padding: 0px;
     box-sizing: border-box;
 }
@@ -12,9 +12,11 @@ a{
     text-decoration: none;
 }
 .padre{
-
     display: flex;
     flex-flow: column nowrap;
+}
+.margen-interno{
+    padding: 0 5px;
 }
     .header{
         background: url(img/losroques.jpg);
@@ -36,6 +38,7 @@ a{
 
             .logo{
                 flex:1 1 auto;
+                
             }
                 .logo a{
                     color: white;
@@ -72,12 +75,19 @@ a{
                     color: black;
                 } 
         .texto-principal{
-            color: seashell;
-            text-align: center;
+            height: 580px;
+            
+            align-items: center;
         }
 
             h1{
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-family:"Rowdies";
+                font-size: 81px;
+                color: white;
+                font-weight: 300%;
+                text-align: center;
+                line-height: 6.0;
+                text-shadow: 1, 1, 1, #000;
             }
 
 
@@ -85,7 +95,7 @@ a{
 
 
     .section{
-        background: black;
+        background: white;
         display: flex;   
         
     }
@@ -97,11 +107,32 @@ a{
         }
 
             .article{
-                background: rgb(10, 122, 173);
                 flex: 1 1 40%;
+                color: black;
+                font-size: 12px;
+                letter-spacing: 1px;
+                margin: 10px 10px 0 0px;
+                flex: 1 1 45%;
+            }
+            .article img{
+                width: 100%;
+            }
+            .article a{
+                color: white;
+                font-size: 12px;
+                padding: 10px 10px;
+                background: #000;
+            }
+            h2{
+                color: white;
+                font-size: 12px;
+                padding: 10px 0;
+                text-align: center;
+                margin-top: -40px;
+                
             }
             .navegacion{
-                background: rgb(64, 178, 223);
+                background: rgb(13, 102, 102);
                 flex: 1 1 100%;
                 text-align: center;
             }
@@ -109,7 +140,10 @@ a{
         .aside{
             background: rgb(7, 135, 167);
             flex:1 1 auto;
-            text-align: center;
+            text-align: center;   
+        }
+        .aside img{
+            width: 100%;
         }
 
             .publicidad{
@@ -125,6 +159,7 @@ a{
         .pie{
             background: skyblue;
             width: 300px; 
+            text-align: center;
         }
 
     @media all and (max-width: 800px){
