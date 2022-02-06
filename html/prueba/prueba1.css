@@ -1,5 +1,5 @@
 *{
-    margin: px;
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
@@ -19,7 +19,7 @@ a{
     padding: 0 5px;
 }
     .header{
-        background: url(img/losroques.jpg);
+        background: url(img/losroques1.jpg);
         background-position: center;
         background-attachment: contain;
         background-size: cover;
@@ -34,12 +34,12 @@ a{
             height: 60px;
             align-items: center;
             font-family:"Rowdies";
-            border-bottom: px solid rgba(255, 255, 255, .5);
+            border-bottom: 1px solid rgba(255, 255, 255, .5);
         }
 
             .logo{
                 flex:1 1 auto;
-                
+                text-align: center;
             }
                 .logo a{
                     color: white;
@@ -51,6 +51,7 @@ a{
 
             .nav{
                 flex:5 1 auto; 
+                text-align: center;
             }
                 .nav a{
                     color: white;
@@ -76,19 +77,19 @@ a{
                     color: black;
                 } 
         .texto-principal{
-            height: 580px;
-            
+            height: 510px;
+            display: flex;
             align-items: center;
+            justify-content: center;
         }
 
             h1{
                 font-family:"Rowdies";
-                font-size: 85px;
+                font-size: 65px;
                 color: white;
-                font-weight: 300%;
-                text-align: center;
-                line-height: 5.5;
-                letter-spacing: 6px;
+                font-weight: 300;
+                line-height: 1.5;
+                letter-spacing: 1.6px;
             }
 
 
@@ -137,7 +138,8 @@ a{
                 font-size: 19px;
                 padding: 15px 0;
                 text-align: center;
-                margin-top: -60px;
+                margin-top: -50px;
+                text-transform: uppercase;
             }
             .navegacion{
                 flex: 1 1 100%;
@@ -159,7 +161,7 @@ a{
         
         .aside{
             flex:1 1 auto;
-            
+            margin: 10px 5px 10px 0;
         }
         .aside img{
             width: 100%;
@@ -179,23 +181,21 @@ a{
         background: #000;
         display: flex;
         justify-content: center;
+        margin-bottom: 10px;
     }
 
         .pie{
-            width: 300px; 
             text-align: center;
-            margin-bottom: 5px;
-            
         }
         .pie a{
             color: #fff;
             font-size: 10px;
-            padding: 0 10px;
             letter-spacing: 2px;
+            padding: 10px;
         }
 
-    @media all and (max-width: 800px){
-    .section{
+    @media all and (max-width: 1120px){
+        .section{
         flex-direction: column;    
     }   
     .menu{
@@ -207,8 +207,18 @@ a{
         justify-content: center;
         }
     }
+    .h1{
+        font-size: 65px;
+        
+        
+        
+    }
+    .texto-principal{
+        height: 510px;
+        text-align: center;
+    }
 
-    @media all and (max-width: 600px){
+    @media all and (max-width: 762px){
         .articulos{
             flex-direction: column;
         }
