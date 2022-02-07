@@ -26,7 +26,6 @@ a{
         display: flex;
         flex-flow: column nowrap;
     }
-
         .menu{
             background: rgba(0, 0, 0, .1);
             display: flex;
@@ -36,7 +35,6 @@ a{
             font-family:"Rowdies";
             border-bottom: 1px solid rgba(255, 255, 255, .5);
         }
-
             .logo{
                 flex:1 1 auto;
                 text-align: center;
@@ -48,7 +46,6 @@ a{
                 .logo a:hover{
                     color: black;
                 }
-
             .nav{
                 flex:5 1 auto; 
                 text-align: center;
@@ -63,7 +60,6 @@ a{
                 .nav a:hover{
                     color: #000;
                 }
-
             .social{
                 flex:1 1 auto;
                 display: flex;
@@ -77,29 +73,22 @@ a{
                     color: black;
                 } 
         .texto-principal{
-            height: 510px;
+            height: 580px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-
             h1{
                 font-family:"Rowdies";
-                font-size: 65px;
+                font-size: 75px;
                 color: white;
                 font-weight: 300;
                 line-height: 1.5;
                 letter-spacing: 1.6px;
             }
-
-
-
-
-
     .section{
         background: white;
         display: flex;   
-        
     }
         .articulos{
             font-family:"Rowdies";
@@ -134,12 +123,17 @@ a{
             }
             h2{
                 font-family:"Rowdies";
-                color: white;
+                color: rgb(7, 135, 167);
                 font-size: 19px;
-                padding: 15px 0;
-                text-align: center;
-                margin-top: -50px;
+                padding: 5px 0;
+                margin-top: 10px;
                 text-transform: uppercase;
+            }
+            button{
+                background-color: rgb(7, 135, 167);
+                color: white;
+                padding: 5px;
+                margin-top: 10px;
             }
             .navegacion{
                 flex: 1 1 100%;
@@ -182,16 +176,23 @@ a{
         display: flex;
         justify-content: center;
         margin-bottom: 10px;
+        text-align: center;
     }
-
+        .li{
+            color: white;
+        }
         .pie{
             text-align: center;
+            flex:1 1 auto;
         }
         .pie a{
             color: #fff;
             font-size: 10px;
             letter-spacing: 2px;
-            padding: 10px;
+            
+        }
+        .pie a:hover{
+            color:rgb(7, 135, 167);
         }
 
     @media all and (max-width: 1120px){
@@ -208,13 +209,9 @@ a{
         }
     }
     .h1{
-        font-size: 65px;
-        
-        
-        
+        font-size: 45px;  
     }
     .texto-principal{
-        height: 510px;
         text-align: center;
     }
 
@@ -223,10 +220,12 @@ a{
             flex-direction: column;
         }
     }
-
+    
     @media all and (max-width: 600px){
         .aside{
             flex-direction: column;
         }
+        .h1{
+            font-size: 35px; 
+        }
     }
-    
