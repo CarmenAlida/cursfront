@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random</title>
+</head>
+<body>
+    
+    <script>
+        let first_number = parseInt(prompt("inserta el primer número"));
+        let second_number = parseInt(prompt("inserta el segundo número"));
+        let random_number = 0;
+
+        let min_number= Math.min(first_number, second_number);
+        let max_number= Math.max(first_number, second_number);
+        let random_number = Math-floor(Math.random() * (max_number - min_number)) + min_number;
+        console.log("manera + eficient .. primer = " + min_number + "\nSegundo = " + max_number + "\nNúmero aleatorio" )
+
+        if(first_number < second_number){
+            random_number = Math.floor(Math.random() * (second_number - first_number)) + first_number;
+        }
+        else if (second_number < first_number){
+            random_number = Math.floor(Math.random() * (first_number - second_number)) + second_number;
+        }
+        else{
+            random_number = first_number;
+        }
+        alert("Primer número = " + first_number + "\nSegundo númer= " +second_number + "\nNúmero aleatori = " + random_number)
+    </script>
+
+</body>
+</html>
+
+
