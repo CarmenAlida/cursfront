@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+
+<body>
+
+    <script>
+    
+        //esenario 1
+        /*let efectivo = 1000;
+        let credito = 1000;
+        let totalCarrito = 700;*/
+
+        //esenario 2
+        /*let efectivo = 300;
+        let credito = 400;
+        let totalCarrito = 700;*/
+
+        //esenario 3
+        let efectivo = 300;
+        let credito = 400;
+        let totalCarrito = 900;
+
+        let disponible = efectivo + credito;
+
+        alert("puedes pagar en efectivo o a credito");
+        
+        if (efectivo > totalCarrito || credito > totalCarrito ) {
+            document.write("puedes pagar en efectivo o credito");
+        } 
+        else if (disponible >= totalCarrito) {
+            document.write("puedes con ambos"); 
+        } 
+        else {
+            document.write("no tienes saldo disponible"); 
+        } 
+        
+    </script>
+
+</body>
+
+</html>
