@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jocWhile</title>
+</head>
+
+<body>
+    <script>
+        /*let i = 0;
+        do {
+        document.write(i + "<br>");
+        i++;
+        }
+        while (i < 5);*/
+
+        /* Utilitza la declaració do while de JavaScript per programar un simple joc
+        d'endevinar un número del 1 al 10. Segueix el següent passos:
+        a. El teu programa calcularà un número secret ( pots fer servir l’objecte Math )
+        i no l’ha de mostrar per pantalla, ja que l’hauràs d’endevinar.
+        b. Demana el número que has d’endevinar per pantalla entre 1 i 10 ( fent
+        servir el prompt) .
+        c. Repeteix el punt anterior, fins que no donis amb el número secret
+        d. Quan el trobis mostra un missatge per pantalla amb el número d’intents que
+        has fet.*/
+
+        var max = 10;
+        var min = 1;
+        var num_secre = Math.random() * (max - min) + min;
+        num_secre = parseInt(num_secre);
+        console.log(num_secre);
+
+        var mensaje = "Ingresa un número para adivinar el número mágico";
+
+        while (true) {
+            var numero_usuario = prompt(mensaje, "0"); // Si el usuario no ingresa un numero, este es por defecto
+            numero_del_usuario = parseInt(numero_usuario);
+            if (numero_del_usuario === num_secre) {
+                alert("ganaste!!!!");
+                break;
+            } else if (numero_del_usuario === 0) {
+                break;
+            } else if (numero_del_usuario > num_secre) {
+                mensaje = "El numero secreto es menor al numero ingresado!!!";
+            } else if (numero_del_usuario < num_secre) {
+                mensaje = "El numero secreto es mayor al numero ingresado!!!";
+            }
+        }
+    </script>
+</body>
+
+</html>
