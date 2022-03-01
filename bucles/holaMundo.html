@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=devi,ce-width, initial-scale=1.0">
+    <title>HolaMundo</title>
+    <script>
+        var articulos=["zapatos", "camisas", "pantalon", "med"]
+      
+    </script>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="header">
+            <p class="logo">javascript</p>
+        </div>
+        <div class="contenido">
+            <div class="principal">
+                <h1>array</h1>
+                <script>
+                    
+                    document.write("<p> el promer articulo es <strong>")
+                    document.write(articulos [2] + "</strong></p>");
+
+                    document.write("hay " + articulos.length);
+
+                    document.write(" el ultimo elemento es <strong>");
+
+                    document.write(articulos[articulos.length-1] + "</strong></p>");
+
+                    articulos.unshift("balon");
+
+                    document.write("agregamos este elemento <strong>");
+                    
+                    document.write(articulos[0] + "</strong></p>");
+
+                    document.write("<p> agreguemos un elemento <strong>");
+                    
+                    articulos.push(prompt("introcuce articulo"));
+
+                    document.write(articulos[articulos.length-1] + "</strong></p>");
+
+                    document.write("<p>"+ articulos[0] + "<br/>");
+
+                    document.write(articulos[1] + "<br/>");
+
+                    document.write(articulos[2] + "<br/>");
+                    document.write(articulos[3] + "<br/>");
+                    document.write(articulos[4] + "<br/></p>");
+
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

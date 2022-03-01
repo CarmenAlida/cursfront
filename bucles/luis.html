@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercici 02 B| Bucles while</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    // b)  Modificar el programa . En aquest cas, a més, s’estableix un número màxim de 5 intents.
+    //     Si l’usuari encerta el número escollit pel programa en aquests 5 intents, el programa mostra
+    //     el següent missatge per pantalla: “Enhorabona, el número és X i has necessitat Y intents per encertar-lo”.
+    //     Si no encerta el número amb els 5 intents, el programa mostra per pentalla: "Has utilitzat massa intents! El número és X "
+
+    let secret = Math.floor(Math.random() * 10) + 1
+    let isLoser = true
+    let lives = 5
+    let count = 1
+
+    console.log(secret)
+    do {
+      let numero = +prompt('A jugar!, Adivina el número secreto. (1-10). Tienes ' + lives + ' intento/s')
+
+      if (isNaN(numero) || numero > 10 || numero <= 0) {
+        alert('Tiene que ser un número y estar en el rango 1 a 10')
+      } else if (secret === numero) {
+        alert('🎉🎉 Ganador! 🎉🎉 ')
+        isLoser = false
+        document.write(
+          '<h1>🎉🎉 Enhorabona, el número és ' +
+          secret +
+          ' i has necessitat ' +
+          count +
+          ' intents per encertar-lo 🎉🎉🎊</h1>'
+        )
+      } else {
+        lives--
+        count++
+      }
+    } while (isLoser && lives > 0)
+
+    if (lives === 0) {
+      document.write(
+        '<h1> 😢Has utilitzat massa intents! El número és ' +
+        secret +
+        ' 😢</h1>'
+      )
+    }
+  </script>
+</body>
+
+</html>
+

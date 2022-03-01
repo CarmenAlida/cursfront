@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>retorMenor</title>
+</head>
+<body>
+    <script>
+        //3. Crea una funció on se li pasa 2 números. I que retorni el menor.
+        let numero1 = prompt("introduca el primer número");
+        let numero2 = prompt("introduca el segundo número");
+        
+
+        function numeromenor(numero1,numero2){
+            if (numero2 > numero1) {
+                document.write(numero1 + " es menor que " + numero2);
+            } else if (numero2 < numero1){
+                document.write(numero2 + " es menor que " + numero1);
+            } else {
+                document.write(numero1 + " es igual a " + numero2);
+            }
+        }
+        numeromenor(numero1,numero2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paraulas</title>
+</head>
+<body>
+    <script>
+        let word ='';
+        let contador = 0;
+        const password = 'fin';
+        const lista = [];
+
+        do{
+            word = prompt('introduce una paraula');
+            lista.push(word)
+            contador++
+        }while(word !== password);
+        console.log('has introducido $(contador) palabras');
+        console.log(lista);
+        document.write('has introducido $(contador) palabras + "<br>"');
+        document.write(lista);
+    </script>
+</body>
+</html>
