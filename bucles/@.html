@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@</title>
+</head>
+<body>
+    <script>
+// Donada una adreça de correu, implementa una funció que verifiqui si el email té 
+// carregat el caràcter @.
+
+        function email(string1){
+            if (string1.search('@')>0){
+                return 'tu correo es ' + string1
+            } else {
+                return 'falta la @'
+            }
+        }
+        // escenari 1
+        // string1= 'calidafh@gmail.com'
+        // document.write(email(string1))
+
+        // escenari 2
+        string1= 'calidafhgmail.com'
+        document.write(email(string1))
+    </script>
+    
+</body>
+</html>

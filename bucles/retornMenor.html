@@ -9,7 +9,7 @@
 <body>
     <script>
         //3. Crea una funció on se li pasa 2 números. I que retorni el menor.
-        let numero1 = prompt("introduca el primer número");
+        /*let numero1 = prompt("introduca el primer número");
         let numero2 = prompt("introduca el segundo número");
         
 
@@ -22,7 +22,27 @@
                 document.write(numero1 + " es igual a " + numero2);
             }
         }
-        numeromenor(numero1,numero2);
+        numeromenor(numero1,numero2);*/
+
+        function comparaValores(val1, val2){
+            menor = Math.min(val1, val2)
+            return menor;
+        }
+
+        var menor;
+        menor=comparaValores(5,5);
+        document.write("en valor menor es " + menor);
+
+       /* if(val1<val2){
+            menor=val1
+        }else{
+            menor=val2
+        }
+        return menor;
+
+        var menor;
+        menor=comparaValores(5,1);
+        document.write()*/
     </script>
 </body>
 </html>
