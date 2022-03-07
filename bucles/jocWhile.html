@@ -27,7 +27,7 @@
         d. Quan el trobis mostra un missatge per pantalla amb el número d’intents que
         has fet.*/
 
-        var max = 10;
+        /*var max = 10;
         var min = 1;
         var num_secre = Math.random() * (max - min) + min;
         num_secre = parseInt(num_secre);
@@ -48,7 +48,24 @@
             } else if (numero_del_usuario < num_secre) {
                 mensaje = "El numero secreto es mayor al numero ingresado!!!";
             }
-        }
+        }*/
+
+        var aleatorio=Math.round(Math.random()*10);
+        var minum, intentos;
+        minum=0;
+        intentos=0;
+
+        do{
+            minum=prompt("introduce un número del 0 al 10");
+            if(aleatorio>minum){
+                alert("mas alto")
+            }if (aleatorio<minum){
+                alert("mas bajo");
+            }
+            intentos++;
+        }while(aleatorio!=minum);
+        alert("😉 correcto 👍 "+ intentos + " intentos");
+
     </script>
 </body>
 

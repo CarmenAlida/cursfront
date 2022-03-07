@@ -1,30 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <!-- <input type="button" id="boton1"> -->
+    <!-- <input type="button" id="boton1">
+    <input type="button" id="boton2">
+    <input type="text" id="micuadro">  -->
 
-<script>
+    <script>
+        // var miboton=document.getElementById("boton1");
+        // var miboton2=document.getElementById("boton2");
+        // var cuadroTexto=document.getElementById("mi cuadro");
+        // miboton.style.width="250px";
+        // miboton.style.height="250px";
+        // miboton2.style.width="250px";
+        // miboton2.style.height="250px";
+        // miboton2.focus();
+        // cuadroTexto.style.height="200px";
+        // cuadroTexto.value="escriba";
+        // miboton.style.backgroundColor="blue";
 
-// var miboton=document.getElementById("boton1");
-// miboton.style.width="250px";
 
-var precioCoche=60000;
-var dineroAhorro=prompt("introduce cuanto tienes ahorrado");
-if(dineroAhorro>=precioCoche){
-    alert("puedes comprar el coche");
-}
-else{
-    alert("no puedes comprar el coche, sigue ahorrando");
-}
-alert("continuamos con la ejecucion del programa");
+        // var precioCoche=60000;
+        // var dineroAhorro=prompt("introduce cuanto tienes ahorrado");
+        // var loteria=prompt("te ha tocado la loteria")
+        // if(dineroAhorro>=precioCoche || loteria=="si"){
+        //     alert("puedes comprar el coche");
+        // }
+        // else{
+        //     alert("no puedes comprar el coche, sigue ahorrando");
+        // }
+        // alert("continuamos con la ejecucion del programa");
 
-</script>
+
+        // var cuerpo=document.getElementById("cuerpo");
+        // var colorWeb=prompt("introduce el color de fondo: azul, verde o rojo").toLowerCase();
+        // if (colorWeb!="azul" && colorWeb!="verde" && colorWeb!="rojo") {
+        //     alert("este color no está contemplado");
+        // }
+        // else if (colorWeb=="azul"){
+        // cuerpo.style.backgroundColor="blue";
+        // }
+        // else if (colorWeb=="verde"){
+        // cuerpo.style.backgroundColor="green";
+        // }
+        // else{
+        //     cuerpo.style.backgroundColor="red";
+        // }
+
+        var num1 = prompt("introduce primer numero");
+        var num2 = prompt("introduce segundo numero");
+        if (!isNaN(num1) && !isNaN(num2)) {
+
+            var operacion = prompt("operación; suma, resta, multiplicación o división");
+
+            if (operacion == "suma") {
+                alert(parseInt(num1) + parseInt(num2));
+            } else if (operacion == "resta") {
+                alert(parseInt(num1) - parseInt(num2));
+            } else if (operacion == "multiplicación" || operacion == "multiplicacion") {
+                alert(parseInt(num1) * parseInt(num2));
+            } else if (operacion == "división" || operacion == "division") {
+                alert(parseInt(num1) / parseInt(num2));
+            } else {
+                alert("operación no contemplada");
+            }
+        }
+        else{
+            if(typeof(num1)=="string" || typeof(num2)=="string"){
+                alert("has introducido numeros")
+            }
+            else{
+                alert("error no identificado");
+            }
+            
+        }
+    </script>
 
 </body>
+
 </html>
