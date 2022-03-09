@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNI</title>
+</head>
+<body>
+    <!-- Fes una funció que donat un número de DNI, calculi si la lletra és correcta. Tingues 
+    present que la lletra del DNI es calcula en dos passos:
+    a. Calcular el mòdul del número del DNI respecte 23
+    b. El resultat de l’operació anterior ha de correspondre a la posició del següent 
+    string:
+    var lletres =”TRWAGMYFPDXBNJZSQVHLCKE”;
+    -->
+    <script>
+
+        function dniEsCorrecto(dni) {
+            const letterList  = "TRWAGMYFPDXBNJZSQVHLCKE";
+            console.log(`DNI introducido: ${dni}`);
+
+            let dniNumber = parseInt(dni.substring(0, 8));
+            console.log(`verifique el número ${dniNumber}`);
+
+            let dniLetter=dni.charAt(8);
+            console.log(`verifique la letra ${dniLetter}`);
+
+            var num = dniNumber % 23;
+            let letterCorrecta = letterList.charAt(num);
+            console.log(`la letra debería ser: ${letterCorrecta}`);
+
+            if ( letterCorrecta.toLowerCase()== dniLetter.toLowerCase()) {
+               return true;  
+            }else{
+                return false;
+            }
+        }
+        var dniCorrecto = false;
+
+        dniCorrecto=dniEsCorrecto("87654321X");
+        console.log("87654321 es " + dniCorrecto);
+        dniCorrecto = dniEsCorrecto("87654321X");
+        console.log("87654321X es " + dniCorrecto)
+
+    </script>
+    
+</body>
+</html>

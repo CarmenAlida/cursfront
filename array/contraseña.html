@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contraseña</title>
+</head>
+<body>
+    <!-- 9. Fes un programa amb les seves funcions que determini si un password és segur. 
+    Per exemple, un password segur ha de complir les següents condicions:
+    ● Ha de contenir almenys 8 números.
+    ● Ha de contenir almenys una majúscula.
+    ● Ha de contenir almenys una minúscula.
+    ● Ha de contenir un número.
+    ● Almenys ha de contenir un caràcter especial.
+    Pots fer servir una funció per cada comprovació. -->
+
+    <script>
+            var password = prompt("introduce tu contraseña");
+
+
+        function validaNum(password) {
+            console.log("tu password tiene " + password.length +" carácteres");
+            if (password.length >=8) {
+                return true;
+            }
+            else{
+                window.alert("mínimo 8 carácteres");
+                return false;
+            }
+        }
+        function contMayuscula(password) {
+            var upperCase = /[A-Z]/g;
+            if (upperCase.test(password)) {
+                return true;
+            } else {
+                window.alert("mínimo una mayúscula");
+                return false;
+            }
+        }
+        function contMinuscula(password) {
+            var lowerCase = /[a-z]/g;
+            if (lowerCase.test(password)) {
+                return true;
+            } else {
+                window.alert("mínimo una minúscula");
+                return false;
+            }
+        }
+        function contNumero(password) {
+            var num = /[0-9]/g;
+            if (num.test(password)) {
+                return true;
+            }
+            else{
+                window.alert("mínimo un número");
+                return false;
+            }
+        }
+        function contCaracter(password) {
+            var specialChars = /[#!$@%&-.,:;]/g;
+            if (specialChars.test(password)) {
+                return true;  
+            } 
+            else {
+                window.alert("mínimo un carácter especial");
+                return false;
+            }
+        }
+
+       
+        var esValidlog = validaNum(password);
+        var esValidMay = contMayuscula(password);
+        var esValidMin = contMinuscula(password);
+        var esValidNum = contNumero(password);
+        var esValidEsp = contCaracter(password);
+        
+        if (esValidlog & esValidMay & esValidMin & esValidNum & esValidEsp) {
+            alert("password correcto")
+        }
+
+    </script>
+</body>
+</html>

@@ -59,6 +59,34 @@
             }
             console.log(carrito.filter(producto => producto.precio > 300));
 
+            // total a pagar
+
+            let resultado = carrito.reduce((total, producto) => total + producto.precio, 0);
+            console.log(resultado);
+
+            carrito.forEach(producto => total += producto.precio);
+            console.log(total);
+
+            // Carrito con Productos con precio > 400
+
+            let carrito1 = carrito.filter(producto.precio > 400);
+
+            // Carrito con Productos con el nombre ‘Celular'
+            
+            let carrito2 = carrito.filter(producto.nombre ==="celular");
+
+            // Carrito con todos los excepto ‘Laptop
+
+            let carrito3 = carrito.filter(producto => producto.nombre !== "laptop");
+
+            console.table(carrito1);
+
+            // carrito no hi hagi algun preu = 0
+
+            resultado= carrito.every(producto => producto.precio == 0);
+
+            console.log(resultado);
+
     </script>
 
 </body>

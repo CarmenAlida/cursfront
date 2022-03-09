@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>captcha</title>
+</head>
+<body>
+    <!-- 0. Simula un Captcha senzill de 5 caràcters ( amb lletres minúscules i números ) amb 
+    JAVASCRIPT. El captcha el pots generar fent ús random i de la següent variable: 
+    var captchaChars = "1234567890abcdefghijklmnopqrst";
+    // Random captchaChars.length
+    Pots implementar una funció que generi el captcha i un altre que el validi. -->
+    
+    <script>
+
+        function generaCaptcha() {
+            var captcha = ""; 
+            var captchaChars = "1234567890abcdefghijklmnopqrst";
+            var randomIndex; 
+
+            for (var i = 0; i < 5; i++) {
+            randomIndex = Math.floor(Math.random() * captchaChars.length);
+            captcha = captcha + captchaChars.charAt(randomIndex);  
+            }
+
+            return captcha
+        }
+        
+        function validaCaptcha(newCaptcha, params) {
+            if (newCaptcha == params) {
+                window.alert("correcto 👍")
+            } else {
+                window.alert ("vuelva a intentarlo 🤦‍♀️");
+            }
+        }
+
+        var newCaptcha = generaCaptcha();
+        var string = window.prompt("introduce el captcha: " + newCaptcha + " : ")
+        validaCaptcha(newCaptcha, string);
+    </script>
+</body>
+</html>

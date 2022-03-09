@@ -52,15 +52,14 @@
 
 
     <script>
-        var meses=["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+        // var meses=["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+
+        // for (var i=0; i< meses.length;i++) {
+        //         document.write(meses[i]+ "<br/>");
+        //     }
 
         // document.write(meses[0]+ "<br/>");
         // document.write(meses[4]+ "<br/>");
-
-            for (var i=0; i<12;i++) {
-                document.write(meses[i]+ "<br/>");
-            }
-
 
 
         // var contador=0;
@@ -69,6 +68,28 @@
         //     document.write(meses[contador]+ "<br/>");
         //     contador++;
         // }
+
+            var trabajadores= new Array();
+            var persona="";
+            var contador=0;
+
+            while (persona!="salir"){
+                persona=prompt("introduce trabajador");
+                trabajadores[contador]=persona;
+                contador++;
+            }
+            
+            trabajadores.pop();
+
+            for (var i=0;i<trabajadores.length;i++){
+                document.write(trabajadores[i] + "<br/>");
+            }
+
+
+
+
+
+
     </script>
     
 </body>
