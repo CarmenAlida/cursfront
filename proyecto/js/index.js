@@ -1,15 +1,42 @@
-function buy(id) {
-    console.table(products[id-1]);
-    
-    cart.push(products[id-1]);
 
-    console.log(cart);
+function buy(id) {
+  
+
+    for (let i = 0; i < products.length; i++) {
+       
+        if(products[i].id == id)
+        {
+            
+            cartList.push(products[i]);
+            console.table(products[i]);
+        }
+
+    }
 }
 
+// function cleanCart() {
+//     cartList.length = 0;
+// }
+function calculaSubtotal() {
+for (i = 0; i< cartList.length; i++) {
 
-
-
-
+    switch (cartList[i].type){
+        case "grocery":
+            subtotal.grocery.value += cartList[i].price;
+            break;
+        case "beauty":
+            subtotal.beauty.value += cartList[i].price;
+            break;
+        case "clothes":
+            subtotal.clothes.value += cartList[i].price;
+            break;
+        default:
+            console.log("hay un error");
+            break;
+        }
+    }
+    
+}
 
 
 

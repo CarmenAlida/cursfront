@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03JS</title>
+</head>
+<body>
+    <script>
+        
+        //declarem la variable a
+        var a = 0;
+        //mostrem el valor de la variable per consola
+        console.log(a); // undefined
+        //mostrem el tipus de la variable per consola
+        console.log(typeof a); // undefined
+        //assignem el número 17
+        // a = 17;
+        console.log(a); // 17
+        console.log(typeof a); // number
+        a=0.17;
+        console.log(a); // 0.17
+        console.log(typeof a); // number
+        a=17e3;
+        console.log(a); //17000 en base 10
+
+        // 1. Fes un programa on es forci el resultat NaN i es mostri per pantalla. 
+
+        console.log(Number(undefined));
+        console.log (Number("unicorn"));  // retorna el NaN
+
+        // 2. Fes un programa per convertir un String nombre a nombre. 
+
+        let text = "Luis" + " Villalba";
+        console.log(text);
+        
+        // 3. Fes un programa per validar que no es un número.
+
+        console.log(Number.isNaN(NaN)) ;
+        console.log(Number.isNaN(isNaN)) ;
+
+        
+
+
+    </script>
+</body>
+</html>

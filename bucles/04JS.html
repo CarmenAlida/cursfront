@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04JS</title>
+</head>
+
+<body>
+
+    <!--  Donat un número: 
+arrodoneix, arrodoneix cap abaix i cap adalt, arrel cuadrada, absolut, potencia, 
+minim, maxim, aleatori, aleatori dins d’un rang. -->
+    
+    <script>
+        //  arrodoneix cap abaix i cap adalt,
+        console.log(Math.round(7.3)) ;
+        console.log(Math.round(7.6)) ;
+        // arrel cuadrada
+        console.log(Math.sqrt(9));
+        // absolut
+        console.log(Math.abs(-7.8));
+        // potencia,
+        console.log(Math.pow(2,2));
+        console.log(Math.pow(3,3));
+        // minim
+        console.log(Math.min(3, -22, 0));
+        // maxim
+        console.log(Math.max(3, -22, 0));
+        // aleatori
+        console.log(Math.random());
+        // aleatori dins d’un rang
+        console.log(Math.random(0,1));
+
+        // pi
+        resultado = Math.PI;
+        console.log("PI: " + resultado);
+
+        // redondeo
+        resultado = Math.round(2.5);
+        console.log("redondeo: "+ resultado);
+
+        // redondeo abajo o arriba
+
+        resultado = Math.ceil(2.2);
+        console.log("ceil o floor "+ resultado);
+
+        // absoluto
+
+        resultado=Math.abs(-300);
+        console.log("absoluto "+ resultado);
+
+        // raiz cuadrada
+        resultado=Math.sqrt(144);
+        console.log("raiz cuadrada "+ resultado);
+
+        // potencia
+        resultado=Math.pow(8,3);
+        console.log("potencia "+ resultado);
+
+        // minimo
+        resultado=Math.min(4,3,21,4,15,5,11,5);
+        console.log("minimo "+ resultado);
+
+        // maximo
+        resultado=Math.max(4,1,21,4,15,5,11,3);
+        console.log(" maximo "* resultado);
+
+        // aleatorio
+        resultado=Math.random();
+        console.log("aleatorio "+resultado );
+
+        // aleatorio
+        resultado=Math.floor(Math.random()*30);
+        console.log("aleatorio dentro de un rango " +resultado)
+
+
+        // 2. Fes un programa que demani dos números a l’usuari i retorni un valor aleatori 
+        // enter comprès entre aquests dos números, ambdós inclosos
+       
+        let n1=prompt("introduce un número ");
+        let n2=prompt("introduce otro número ");
+
+        if (isNaN(n1)==true || isNaN(n2==true)) {
+            alert("no has introducido numeros")
+        }
+
+        let min=Math.min(n1,n2);
+        let max=Math.min(n1,n2);
+        let random=(Math.random()*(max-min)+min);
+
+        console.log("número 1= "+n1+" , " + " número = "+n2 + "  aleatorio= " + random);
+
+        
+
+    </script>
+
+</body>
+
+</html>
