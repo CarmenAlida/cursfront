@@ -52,11 +52,18 @@ var products = [
         name: 'Toddler Frock',
         price: 9.99,
         type: 'clothes'
+    },
+    {
+        id: 10,
+        name: 'Gadget',
+        price: 1.99,
+        type: 'gatget'
     }
 ]
 var cart=[];
 
 // Array de la llista de la compra
+
 var cartList = [];
 
 var subtotal = {
@@ -72,4 +79,9 @@ var subtotal = {
         value: 0,
         discount: 0
     },
+    gadget:{
+        value: 0,
+        discount: 0
+    }, 
+    
 };

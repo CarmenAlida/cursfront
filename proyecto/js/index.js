@@ -13,32 +13,58 @@ function buy(id) {
 
     }
 }
+function buy(id) {
+
+    cartList.push(products.find((pepito) => pepito.id == id ))
+
+}
+
 
 // function cleanCart() {
 //     cartList.length = 0;
 // }
 function calculaSubtotal() {
-for (i = 0; i< cartList.length; i++) {
+// for (i = 0; i< cartList.length; i++) {
 
-    switch (cartList[i].type){
-        case "grocery":
-            subtotal.grocery.value += cartList[i].price;
-            break;
-        case "beauty":
-            subtotal.beauty.value += cartList[i].price;
-            break;
-        case "clothes":
-            subtotal.clothes.value += cartList[i].price;
-            break;
-        default:
-            console.log("hay un error");
-            break;
-        }
-    }
+//     switch (cartList[i].type){
+//         case "grocery":
+//             subtotal.grocery.value += cartList[i].price;
+//             break;
+//         case "beauty":
+//             subtotal.beauty.value += cartList[i].price;
+//             break;
+//         case "clothes":
+//             subtotal.clothes.value += cartList[i].price;
+//             break;
+//         default:
+//             console.log("hay un error");
+//             break;
+//         }
+//     }
     
+
+var tipus = Object.keys(subtotal);
+
+for (var i = 0; i < cartList.length; i++){
+  tipus.forEach(element => {
+      if(cartList[i].type == element) {
+          var total2 =subtotal[element].value + cartList[i].price;
+          subtotal[element].value = parseFloat(total2.toFixed(2));
+      } })
+}
 }
 
 
+// for (var i = 0; i < cartList.length; i++){
+//     for (var j = 0; j < tipus.length; j++) {
+//         if (cartList[i].type == tipus[j]) {
+//             var total2 = subtotal[tipus[j]].value + cartList.price;
+//             subtotal[tipus[j]].value = parseFloat(total2.toFixed(2));
+//         }
+        
+//     }
+// }
+// }
 
 
 
