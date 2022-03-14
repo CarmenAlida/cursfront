@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrito 2 Themob</title>
+    <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+    <div id="w">
+      <header id="title">
+        <h1>CARRITO COMPRA<span><img src="gallery/logoTheMob.jpg" alt=""></span></h1>
+      </header>
+      <div id="page">
+        <table id="cart">
+          <thead>
+            <tr>
+              <th class="first">FOTO</th>
+              <th class="second">CANTIDAD</th>
+              <th class="third">PRODUCTO</th>
+              <th class="fourth">TOTAL LINEA</th>
+              <th class="fifth">&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- shopping cart contents -->
+            <tr class="productitm">
+              <!-- http://www.inkydeals.com/deal/ginormous-bundle/ -->
+              <td><img src="gallery/car-1.png" class="thumb"></td>
+              <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+              <td>Descripción del producto</td>
+              <td>79.00 €</td>
+              <td><span class="remove"><img src="gallery/32x32.png" alt="X"></span></td>
+            </tr>
+            <tr class="productitm">
+              <!-- http://www.amazon.com/Stuff-My-Cat-The-Book/dp/0811855384 -->
+              <td><img src="gallery/car-2.png" class="thumb"></td>
+              <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+              <td>Descripción del producto</td>
+              <td>8.95 €</td>
+              <td><span class="remove"><img src="gallery/32x32.png" alt="X"></span></td>
+            </tr>
+            <tr class="productitm">
+              <!-- http://www.amazon.com/SpongeBob-SquarePants-The-First-Episodes/dp/B002DYJTVW -->
+              <td><img src="gallery/car-3.png" class="thumb"></td>
+              <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+              <td>Descripción del producto</td>
+              <td>75.00 €</td>
+              <td><span class="remove"><img src="gallery/32x32.png" alt="X"></span></td>
+            </tr>
+            <tr class="productitm">
+              <!-- http://www.barnesandnoble.com/w/javascript-and-jquery-david-sawyer-mcfarland/1100405042 -->
+              <td><img src="gallery/header-bg.png" class="thumb"></td>
+              <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+              <td>Descripción del producto</td>
+              <td>27.50 €</td>
+              <td><span class="remove"><img src="gallery/32x32.png" alt="X"></span></td>
+            </tr>
+            
+            <!-- tax + subtotal -->
+            <tr class="extracosts">
+              <td class="light">I.V.A</td>
+              <td colspan="2" class="light"></td>
+              <td>35.00 €</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr class="totalprice">
+              <td class="light">Total:</td>
+              <td colspan="2">&nbsp;</td>
+              <td colspan="2"><span class="thick">225.45 €</span></td>
+            </tr>
+            
+            <!-- checkout btn -->
+            <tr class="checkoutrow">
+              <td colspan="5" class="checkout"><button id="submitbtn">Comprar ahora!</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </body>
+  </html>

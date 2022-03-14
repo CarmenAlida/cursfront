@@ -1,0 +1,19 @@
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+--red: #ff2e63;
+--black: #252a34;
+--blue: #08d9d6;
+--white: #eaeaea;
+--title: 30px;
+--text: 19px;
+font-family: 'Red Hat Text', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+display: flex;
+justify-content: center;
+flex-direction: column;
