@@ -1,0 +1,94 @@
+<body>
+    <section id="section" class="section">
+        <p id="mainHeading" class="heading">
+            This is the main heading(not a header)
+        </p>
+        <p id="Heading" class="heading">
+            This is a heading
+        </p>
+        <p id="subHeading" class="heading">
+            This is a subheading
+        </p>
+        <ul>
+            <li id="primero">Elemento 1</li>
+            <li id="segundo">Elemento 2</li>
+            <li id="tercero">Elemento 3</li>
+        </ul>
+    </section>
+</body>
+<script>
+    //Get the first <p> element:
+    const el1 = document.querySelector("p");
+    console.log("el1");
+    console.log(el1);
+    //Get the first element with class="heading":
+    var el2 = document.querySelector(".heading");
+    console.log("el2(1)");
+    console.log(el2);
+    //Get the third element <p>:
+    const el3 = document.querySelectorAll("p")[2];
+    console.log("el3");
+    console.log(el3);
+    //Contenido HTML del segundo elemento class="heading"
+    const el4 = document.querySelectorAll(".heading")[1].innerHTML;
+    console.log("el4");
+    console.log(el4);
+    //Contenido primer elemento id="subheading"
+    const el5 = document.querySelector("#subHeading").textContent;
+    console.log("el5");
+    console.log(el5);
+    // primer elemento con id="subheading
+    const el6 = document.querySelector("#section");
+    console.log("el6");
+    console.log(el6);
+    // Nos devuelve el primer elemento <section>
+    const el7 = document.querySelector("section");
+    console.log("el7");
+
+    console.log(el7);
+    // Nos devuelve la lista de Nodos del <section>
+    const el8 = document.querySelectorAll("section")[0].childNodes;
+    console.log("el8");
+    console.log(el8);
+    // Nos devuelve el elemento con id=section
+    const el9 = document.getElementById("section");
+    console.log("el9");
+    console.log(el9);
+    // Nos devuelve el elemento con id=section
+    const el10 = document.querySelector(".section");
+    console.log("el10");
+    console.log(el10);
+    //Nos devuelve los nodos del elemento <ul>
+    const el11 = document.querySelector("ul").childNodes;
+    console.log("el11");
+    console.log(el11);
+    //Nos devuelve los elementos del <ul>
+    const el12 = document.querySelector("ul").children;
+    console.log("el12");
+    console.log(el12);
+    //Nos devuelve el nodo del elemento padre del <li>
+    const el13 = document.querySelector("li").parentNode;
+    console.log("el13");
+    console.log(el13);
+    //Nos devuelve el elemento padre del <li>
+    const el14 = document.querySelector("li").parentElement;
+    console.log("el14");
+    console.log(el14);
+    // Obtiene un elemento por id
+    const el16 = document.getElementById("mainHeading");
+    console.log(el16);
+    // Obtiene una lista con los elementos que tienen esa clase
+    const el17 = document.getElementsByClassName('heading');
+    console.log(el17);
+    // Obtiene una HTMLCollection con los todos los elementos 'p'
+    const el15 = document.getElementsByTagName('p');
+    console.log(el15);
+    // Quan utilitzar - lo: Quan voleu contingut amb HTML i què hi ha exactament al
+    // nostre element, inclosos els espais, els salts de línia i la resta de format.
+    el3.innerHTML = "<b>Texto destacado</b> dentro de párrafo";
+    // Quan utilitzar-lo: When you only need to see what’s in the element — with zero formatting.
+    el3.innertext = "<b>Texto destacado</b> dentro de párrafo";
+    // Quan utilitzar-lo: When you want to see what’ s in the element, plus any styling on it.
+    el3.textContent = "Parrafo dinámico";
+</script>
+</body>

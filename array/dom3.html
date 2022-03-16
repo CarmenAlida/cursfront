@@ -1,0 +1,35 @@
+<section id="seccion">
+    <h1>ESto es el texto de h1</h1>
+    <p>This is paragraph 3</p>
+</section>
+<script>
+    // Creant ELEMENTS: Para crear elementos llamamos a createElement con 
+    // el nombre del elemento 
+    var nuevoH1 = document.createElement('h1');
+    var nuevoParrafo = document.createElement('p');
+
+    // Fiquem contingut
+    nuevoH1.textContent = "ESto es el texto de h1";
+    nuevoParrafo.textContent = "This is paragra'ph 3";
+
+    // Los elementos estarían listos para añadirlos al DOM, ahora mismo 
+    // solo existen en memoria, pero no serán visibles hasta que no los añadamos a un 
+    // elemento del DOM seleccionamos un elemento
+    var cabecera = document.getElementById('seccion');
+    // Añadir elementos hijos a un elemento
+    cabecera.appendChild(nuevoH1);
+    cabecera.appendChild(nuevoParrafo);
+    // Creant NODES: Los elementos tienen Nodos. Para ello creamos los nodos. 
+    var textoH1 = document.createTextNode('ESto es el texto de h1');
+    var textoParrafo = document.createTextNode('This is paragraph 3');
+    // Añadir los nodos al elemento
+    nuevoH1.appendChild(textoH1);
+    nuevoParrafo.appendChild(textoParrafo);
+    // Los elementos estarían listos para añadirlos al DOM, ahora mismo solo 
+    // existen en memoria, pero no serán visibles hasta que no los añadamos a un
+    // elemento del DOM seleccionamos un elemento
+    var cabecera = document.getElementById('seccion');
+    // Añadir elementos hijos a un elemento
+    cabecera.appendChild(nuevoH1);
+    cabecera.appendChild(nuevoParrafo);
+</script>
