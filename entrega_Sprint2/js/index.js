@@ -1,18 +1,5 @@
 
-function buy(id) {
-  
 
-    for (let i = 0; i < products.length; i++) {
-       
-        if(products[i].id == id)
-        {
-            
-            cartList.push(products[i]);
-            console.table(products[i]);
-        }
-
-    }
-}
 function buy(id) {
 
     cartList.push(products.find((products) => products.id == id ))
@@ -36,8 +23,18 @@ for (var i = 0; i < cartList.length; i++){
 }
 
 
+function cleanCart(){
+    cartList = [];
+}
 
 
+
+// orderPrice
+// Array  prototype.sort() ==> products
+
+
+const products_Price1 = products.sort((products1, products2) =>
+products1.price - products2.price)
 
 
 

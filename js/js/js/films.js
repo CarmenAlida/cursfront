@@ -47,6 +47,11 @@ console.table(primeros);
 return primeros;
 }
 // 5
+
+
+
+
+// 6
 function orderByYear(array) {
     let result = []; 
     result = array.map(movie => ({year: movie.year, title: movie.title}))
