@@ -73,15 +73,12 @@ for (var i = 0; i < cartList.length; i++){
 // products1.price - products2.price)
 
 function OrdenarProductos(){
-    var products_Price = products.sort((producto1, producto2) => (producto1.price > producto2.price) ? 1 : -1);
+    var productOrderPrice = products.sort((element1, element2) => (element1.price > element2.price) ? 1 : -1);
 
-    console.log("hola");
+    console.log("ordena de menor a mayor");
 
-    console.log(products_Price);
+    console.table(productOrderPrice);
 }
-
-
-
 
 
 
