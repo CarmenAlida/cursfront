@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos</title>
+</head>
+<body>
+    <button id="primer">
+        Fes clic aquí!
+        </button>
+        <script>
+        var primerElement = document.getElementById('primer');
+        // Creem les funcion que volem que sigui cridada
+        function mostrarMissatge1() {
+        alert("primera funció");
+        }
+        function mostrarMissatge2() {
+        alert("segona funció");
+        }
+        //Al fer click afegim event mostrarMissatge1
+        primerElement.addEventListener('click', mostrarMissatge1);
+        //Ara al fer click al mateix botó, afegim event mostrarMissatge2
+        primerElement.addEventListener('click', mostrarMissatge2);
+        </script>
+
+
+
+
+
+
+</body>
+</html>

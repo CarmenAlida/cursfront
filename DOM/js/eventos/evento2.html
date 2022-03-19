@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evento2</title>
+</head>
+
+<body>
+
+
+    <p id="demo">Click me.</p>
+
+    <button onclick="mostraMissatge()">
+        Fes clic aquí!
+    </button>
+
+
+    <script>
+        document.getElementById("demo").addEventListener("mousedown", mouseDown);
+        document.getElementById("demo").addEventListener("mouseup", mouseUp);
+
+
+        function mouseDown() {
+            document.getElementById("demo").innerHTML = "The mouse button is held down";
+        }
+
+        function mouseUp() {
+            document.getElementById("demo").innerHTML = "You released the mouse button.";
+        }
+
+        var i = 0;
+
+        function mostraMissatge() {
+            ++i;
+            alert('Has fet clic a l\'element ' + i + 'vegades ');
+        }
+        'use strict';
+        document.addEventListener('keydown', (event) => {
+            const keyName = event.key;
+            alert('keydown event\n\n' + 'key: ' + keyName);
+        });
+    </script>
+</body>
+
+</html>

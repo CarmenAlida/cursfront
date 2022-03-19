@@ -66,6 +66,23 @@ for (var i = 0; i < cartList.length; i++){
 // }
 // }
 
+// // orderPrice
+// Array  prototype.sort() ==> products
+
+// const products_Price1 = products.sort((products1, products2) =>
+// products1.price - products2.price)
+
+function OrdenarProductos(){
+    var products_Price = products.sort((producto1, producto2) => (producto1.price > producto2.price) ? 1 : -1);
+
+    console.log("hola");
+
+    console.log(products_Price);
+}
+
+
+
+
 
 
 
