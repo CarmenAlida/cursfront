@@ -1,0 +1,91 @@
+
+#tienda {
+  border: 8px solid black;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#tienda article {
+  width: 80%;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 5px;
+}
+#tienda article::after {
+  content: "";
+  flex: auto;
+}
+#tienda .producto {
+  width: 308px;
+  display: flex;
+  flex-direction: column;
+}
+#tienda .producto h2 {
+  margin: 0px;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#tienda .producto > p {
+  margin: 0px;
+  display: none;
+}
+#tienda .producto img {
+  max-width: 180px;
+  height: 200px;
+  object-fit: contain;
+}
+#tienda .producto button:hover {
+  background-color: rgb(13, 54, 238);
+}
+#tienda .precio {
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#tienda aside {
+  border: 3px solid black;
+  width: 20%;
+}
+#tienda aside ul li {
+  margin: 2px;
+  width: 80%;
+  list-style-type: none;
+  text-align: center;
+}
+
+#tienda aside ul input[type="number"] {
+  border: 1px solid black !important;
+  margin: 1px 0px 1px 0px;
+  width: 80%;
+}
+@media only screen and (max-width: 950px) {
+  #tienda {
+    border: 8px solid rgb(255, 247, 52);
+
+    display: flex;
+    flex-direction: column;
+  }
+  #tienda article,
+  #tienda aside {
+    border: 3px solid rgb(255, 247, 52);
+    width: 100%;
+  }
+}
+/*mobil*/
+@media only screen and (max-width: 622px) {
+ 
+  #tienda  article {
+    flex-direction: column;
+  }
+}
+* {
+  border: unset !important;
+  margin: 0 auto;
+}
