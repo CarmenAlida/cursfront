@@ -20,8 +20,10 @@
     <script>
         const lista = document.getElementById("lista-dinamica");
         const arrayItem = ["item 1", "item 2", "item 3"];
+
         const fragment = document.createDocumentFragment();
         const template = document.querySelector("#template-li").content;
+        
         arrayItem.forEach((item) => {
             template.querySelector("span").textContent = item;
             const clone = template.cloneNode(true);

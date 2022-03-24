@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', ( ) =>{
 
 function pintarCardsProducts() {
     products.forEach(item =>{
+        templateCard.querySelector('.cardAdd').setAttribute('id', item.id);
+        templateCard.querySelector('.cardRemove').setAttribute('id', item.id);
         templateCard.querySelector('img').setAttribute('src', item.img);
         templateCard.querySelector('h5').textContent = item.name
         templateCard.querySelector('p').textContent = item.price
