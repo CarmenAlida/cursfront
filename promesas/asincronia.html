@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asincronia</title>
+</head>
+
+<body>
+    <script>
+        async function calcula() {
+            let sum = 0;
+            setTimeout(function () {
+                sum = 4 + 5;
+                if (isNaN(sum)) {
+                    console.log('Error while calculating sum.');
+                } else {
+                    console.log(sum);
+                }
+            }, 2000);
+        };
+        async function inici() {
+            await calcula();
+            console.log("Crida a calcula acabada ()");
+        }
+        inici();
+        console.log("ACABAT EL PROGRAMA");
+    </script>
+</body>
+
+</html>

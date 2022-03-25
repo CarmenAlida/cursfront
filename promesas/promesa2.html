@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesa2</title>
+</head>
+
+<body>
+    <script>
+        // 2. Donada la següent promesa.
+        function calculDescuento() {
+            console.log('Aplicando el Descuento...');
+            return true;
+        }
+        const aplicarDescuento = valor = new Promise((resolve, reject) => {
+            if (calculDescuento(valor)) {
+                resolve('Descuento Aplicado');
+            } else {
+                reject('No se pudo aplicar el descuento');
+            }
+        });
+
+        // Crida a la promesa aplicarDescuento. 
+        // Recordar capturar l’error dins de la promesa: 'No se pudo aplicar el descuento'
+
+    </script>
+</body>
+
+</html>

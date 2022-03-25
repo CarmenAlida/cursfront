@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promesa1</title>
+</head>
+
+<body>
+    <script>
+        // 1. Donada la següent promesa.
+        const paises = [];
+        const nuevoPais = pais => new Promise(resolve => {
+            setTimeout(() => {
+                paises.push(pais);
+                resolve(`Agregado: ${pais}`)
+            }, 3000);
+        });
+        // Fent servir promeses, agrega cada 3 segons un país: Alemania, Francia, Inglaterra, 
+// Italia. Capturar errors no controlats.
+        nuevoPais('alemania')
+        .then(resultado =>{
+            console.log(resultado);
+            console.log(paises);
+            return nuevoPais('francia');
+        })
+        .then(resultado =>{
+            console.log(resultado);
+            console.log(paises);
+            return nuevoPais('inglaterra');
+        })
+        .then(resultado =>{
+            console.log(resultado);
+            console.log(paises);
+            return nuevoPais('italia');
+        })
+        .catch(error=>{
+            console.log("error: " + error);
+        })
+    </script>
+</body>
+
+</html>
