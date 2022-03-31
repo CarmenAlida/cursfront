@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+
+    <title>clase1</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <template id="mensaje">
+        <div>
+            <div>
+                <h1>{{ mensaje }} </h1>
+                <h1>{{ mensajeHTML }} </h1>
+                <div>
+                    <img v-bind:src="imagen" />
+                </div>
+                 
+            </br>
+                <h2>{{contador}} </h2>
+                <button v-on:click="number++">mas</button>
+                <button v-on:click="number--">menos</button>
+                <button v-on:click="reser">random</button>
+            </div>
+        </div>
+    </template>
+
+    <!--OJO això ha d'estar aquí al final -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
