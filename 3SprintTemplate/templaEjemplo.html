@@ -9,24 +9,46 @@
 </head>
 
 <body>
-    <ul id="lista-dinamica"> </ul>
+    <!-- <ul id="lista-dinamica"> </ul>
     <template id="template-li">
         <li class="list">
             <b>nombre: </b> <span class="text-danger">descripción...</span>
         </li>
-    </template>
+    
+    </template> -->
+    <table id="producttable">
+        <thead>
+          <tr>
+            <td>UPC_Code</td>
+            <td>Product_Name</td>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- datos opcionales pueden incluirse aquí opcionalmente -->
+        </tbody>
+      </table>
+      
+      <template id="productrow">
+        <tr>
+          <td class="record"></td>
+          <td></td>
+        </tr>
+      </template>
+      
     <script>
-        const lista = document.getElementById("lista-dinamica");
-        const arrayItem = ["item 1", "item 2", "item 3"];
-        const fragment = document.createDocumentFragment();
-        const template = document.querySelector("#template-li").content;
-        arrayItem.forEach((item) => {
-            template.querySelector("span").textContent = item;
-            const clone = template.cloneNode(true);
-            // const clone = document.importNode(template, true);
-            fragment.appendChild(clone);
-        });
-        lista.appendChild(fragment);
+        // const lista = document.getElementById("lista-dinamica");
+        // const arrayItem = ["item 1", "item 2", "item 3"];
+        // const fragment = document.createDocumentFragment();
+        // const template = document.querySelector("#template-li").content;
+        // arrayItem.forEach((item) => {
+        //     template.querySelector("span").textContent = item;
+        //     const clone = template.cloneNode(true);
+        //     // const clone = document.importNode(template, true);
+        //     fragment.appendChild(clone);
+        // });
+        // lista.appendChild(fragment);
+
+        
     </script>
 </body>
 

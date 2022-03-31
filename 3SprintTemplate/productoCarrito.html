@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productoCarrito</title>
+</head>
+
+<body>
+    <ul id="lista-dinamica"> </ul>
+    <template id="template-li">
+        <li class="productitm">
+            <b>Coche: </b> <span class="text-danger">descripción...</span>
+        </li>
+    </template>
+    <script>
+        const lista = document.getElementById("lista-dinamica");
+        const arrayItem = ["id:0 ", "id:1", "id:2"];
+        const fragment = document.createDocumentFragment();
+        const template = document.querySelector("#template-li").content;
+        arrayItem.forEach((id) => {
+            template.querySelector("span").textContent = id;
+            const clone = template.cloneNode(true);
+            // const clone = document.importNode(template, true);
+            fragment.appendChild(clone);
+        });
+        lista.appendChild(fragment);
+    </script>
+</body>
+
+</html>
