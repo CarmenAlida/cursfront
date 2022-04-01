@@ -14,13 +14,19 @@
     <div id="app">
         <h1>hola</h1>
         <h1> {{titulo}} </h1>
+        <input type="text" v-model="nuevaFruta" @keyup.enter="agregarFruta">
+        <button @click="agregarFruta">agregar</button>
         <ul>
             <li v-for="fruta of frutas"> 
-                {{fruta.cantidad}} - {{fruta.nombre}}
+                <input type="number" v-model.number="fruta.cantidad">
+                 {{fruta.nombre}}
+                 <button @click="fruta.cantidad++">+</button>
                 <span v-if="fruta.cantidad === 0"> - sin stock </span>
             </li>
         </ul>
-
+        <div>
+        <h4>TOTAL:{{ sumarFrutas }} </h4>
+    </div>
     </div>
     
 
