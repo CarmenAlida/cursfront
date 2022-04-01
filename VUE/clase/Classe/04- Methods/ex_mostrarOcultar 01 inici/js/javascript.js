@@ -20,5 +20,9 @@ const app = new Vue({
     mensaje: "Benvingut a VUE",
     imagen: "img/vue.jpg",
   },
-
+  methods : {
+    toggleMostrar: function () {
+      this.mostrar =!this.mostrar;
+    }
+   }
 });

@@ -14,27 +14,32 @@
         <b>ejercicio 1</b> 
         <!--Iterar array con index:  Muestra la nota de cada estudiante i muestra el indice del array:  -->
        <ul>
-           <li></li>
+           <li v-for="nota in students"  :key="nota.i">
+              
+              {{nota.name}} - {{nota.note}}
+           </li>
        </ul>
 
        <b>ejercicio 2</b> 
-       <!-- Acceder a la propiedad del estudiante 0,  -->
-       <p>  </p>
+       <!-- Acceder a la propiedad del primer estudiante  -->
+       <p> {{students[0].name}} </p>
 
        <b>ejercicio 3</b> 
        <!-- Iterar un objeto con key: Muestra todos los atributos de student -->
-       <p></p>
+       <!-- <p>{{student.name}} - {{student.lastname}}- {{student.note}}  </p> -->
+       <p v-for="(value, key) in student"> {{key}}: {{value}} </p>
+       
 
        <b>ejercicio 4</b> 
        <!-- Iterar un rango: Itera la variable i hasta 10  -->
        <div>
-          <p></p>
+          <p v-for="i in 10"> {{i}} </p>
        </div>
 
        <b>ejercicio 5</b> 
        <!-- v-for con v-if: Muestra todos los estudiantes con nota > 5 -->
        <ul>
-           <li></li>
+           <li v-for="student in students" v-if="student.note > 5"> {{student.name}} - {{student.note}} </li>
        </ul>
     </div>
     
@@ -53,7 +58,8 @@
                     student: {
                         name: 'Carlos',
                         lastname: 'Rodriguez',
-                        note: 10
+                        note: 10,
+                        dni: '4453333k'
                     }
                 }
             },
