@@ -13,10 +13,14 @@
 
 <body>
     <div id="app" class="container mt-5">
-        <div class="bg-primary" :class="'p-3'">
+        <div :class="['p-3', 'text-white', fondo]">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae exercitationem magni incidunt enim, sapiente commodi obcaecati dolor numquam vero quia quis aliquam possimus? Nemo sint dolorem officiis quas tempore alias!</p>
         </div>
-
+        <input type="text" class="form-control my-3" v-model="fondo">
+        <div class="text-white p-3" :class="{'bg-info' : color, 'bg-success':!color}">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt neque odit beatae quaerat eveniet aut distinctio amet cumque sunt rem quasi enim blanditiis, similique molestias est iusto incidunt ipsum dolor!</p>
+        </div>
+        <button class="btn btn-primary" @click="color = !color">cambiar</button>
     </div>
     
 
