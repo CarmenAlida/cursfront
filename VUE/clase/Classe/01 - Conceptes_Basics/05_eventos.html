@@ -2,14 +2,14 @@
    <head>
       <title>VueJs Instance</title>
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-      
+      <title>eventos</title>
    </head>
    <body>
       <div id = "databinding">
-         <button v-on:click = "displaynumbers">Click ME</button>
+         <button v-on:click = "displaynumbers">Click me</button>
          <!-- També podriem @click: 
          <button @click = "displaynumbers">Click ME</button>-->         
-         <h2> Add Number {{num1}}+{{num2}} = {{total}}</h2>
+         <h2> Sumar {{num1}}+{{num2}} = {{total}}</h2>
       </div>
       <script type = "text/javascript">
          var vm = new Vue({

@@ -1,7 +1,7 @@
 <html>
 
 <head>
-   <title>VueJs Instance</title>
+   <title>props</title>
    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
 </head>
 
@@ -9,14 +9,14 @@
 
    <!-- Imaginem que tenim un component fill que rep del seu pare el name -->
    <div id="app">
-      <h1>Bienvenido {{ name }}</h1>
+      <h1>Bienvenida {{ name }}</h1>
    </div>
 
    <script>
       var vm = new Vue({
          el: '#app',
          data: {
-            props: ['name'],
+            props: ['bebe']
          }
       });
    </script>

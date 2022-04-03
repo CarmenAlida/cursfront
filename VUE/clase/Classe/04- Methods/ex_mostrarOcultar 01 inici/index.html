@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
   <title>1e component VUE</title>
 </head>
@@ -11,13 +13,16 @@
   <div id="app"></div>
 
   <template id="ejemplo">
-    <div>     
-        <b>{{ mensaje }}</b>
-        <img :src="imagen" />      
-        <p> v-for="cursos.ejemplo" v-if= "mostrar" == true</p>
-      <button @click="toggleMostrar">Mostrar/Ocultar</button>
+    <div>
+      <b>{{ mensaje }}</b>
+      <img :src="imagen" />
+      <p v-for="curs in cursos" v-if="mostrar == true">
+        <a v-bind:href="curs.url"> {{curs.name}} </a>
+      </p>
+      <p v-else="mostra r== false"></p>
+      <button @click="toggleMostrar">Mostrar cursos / Ocultar cursos</button>
     </div>
-  </template>  
+  </template>
 
   <!--OJO això ha d'estar aquí al final -->
   <script src="js/javascript.js"></script>

@@ -17,7 +17,7 @@ const app = new Vue({
       },
     ],    
     mostrar: true,
-    mensaje: "Benvingut a VUE",
+    mensaje: "Bienvenida a VUE",
     imagen: "img/vue.jpg",
   },
   methods : {

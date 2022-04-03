@@ -3,14 +3,15 @@
 
 <head>
    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+   <title>methodos</title>
 </head>
 
 <body>
 
    <div style="text-align: center;" id="home">
       <!-- Rendering data to DOM -->
-      <h1 style="color: seagreen;">{{title}}</h1>
-      <h2>Title : {{name}}</h2>
+      <h1 style="color: burlywood;">{{title}}</h1>
+      <h1>Title : {{name}}</h1>
       <!-- Calling function in methods -->
       <h2>Topics: {{show()}}</h2>
    </div>
@@ -23,7 +24,7 @@
       el: '#home',
       // Assigning values of parameter
       data: {
-         title: "Geeks for Geeks",
+         title: "bienvenida a vue",
          name: "Vue.js",
          topic: ["Instances","examples","lessons"]
       },
