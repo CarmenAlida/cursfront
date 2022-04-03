@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-    <title>Document</title>
+    <title>bind Clasees</title>
 
     <style>
         .no-dynamic {
-            background: grey;
+            background: rgb(226, 244, 199);
         }
 
         .my-style {
-            border: 1px solid green;
+            border: 1px solid rgb(133, 217, 133);
         }
 
         .my-style-error {
@@ -31,16 +31,16 @@
             una clase estática
             <input type="text" class="my-style">
 
-            <br>
+            <br><br>
             Una clase estática y una dinámica en objeto: deshabilitat
-            <input type="text" class="no-dynamic" v-bind:class="error">
+            <input type="text" class="no-dynamic" v-bind:class="myError">
 
-            <br>
+            <br><br>
             <!-- agafa 'no-dynamic' i complementa amb el que hi ha a myStyles-->>
             enlace de clases en formato array
             <input type="text" v-bind:class="['no-dynamic', myStyles]">
 
-            <br>
+            <br><br>
             enlace de estilos
             <input type="text" v-bind:style="myCSS">
         </div>
@@ -53,10 +53,10 @@
             data: {
                 myError: 'my-style-error',
                 active: true,
-                error: false,
+                error:false,
                 myStyles: {
                     'no-dynamic': true,
-                    'my-style': true
+                    'my-style': true,
                 },
                 myCSS: {
                     background: 'red'
