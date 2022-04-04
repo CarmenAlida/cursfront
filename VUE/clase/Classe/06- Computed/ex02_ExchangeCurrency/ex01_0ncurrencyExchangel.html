@@ -9,7 +9,7 @@
 
 <body>
    <style>
-      #moneda {
+      #databinding{
          padding: 20px 15px 15px 15px;
          margin: 0 0 25px 0;
          width: auto;
@@ -21,26 +21,26 @@
       }
    </style>
 
-   <div id="moneda">
-      <h1>Hola: {{cliente}} </h1>
+   <div id= "databinding">
+      <h1>Hola: {{name}} </h1>
       <h1>Currency Converter</h1>
       <span>Enter Amount:</span>
-      <input type="number" placeholder="Enter Amount" /><br /><br />
+      <input type = "number" placeholder = "Enter Amount" /><br /><br />
       <span>Convert From:</span>
       <select  style="width:300px;font-size:25px;">
-         <option v-for="moneda in currencyfrom" :value="moneda.name"> {{moneda.desc}} </option>
+         <option v-for = "moneda in currencyfrom" :value="moneda.name"> {{moneda.desc}} </option>
       </select>
       <span>Convert To:</span>
       <select style="width:300px;font-size:25px;">
-         <option :value="moneda.name"> {{moneda.desc}} </option>
+         <option value="to"> to </option>
       </select><br /><br />
    </div>
 
    <script>
       var app = new Vue({
-         el: '#moneda',
-         data: {
-            cliente: 'Carmen Alida',
+         el: '#databinding',
+         data:{
+            name:'Carmen Alida',
             currencyfrom: 
                [{
                   name: "USD",
