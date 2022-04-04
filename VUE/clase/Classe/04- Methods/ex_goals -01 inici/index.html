@@ -12,8 +12,13 @@
     <div id="app">
       <div>
         <label for="goal">Goal</label>
-        <input type="text" id="goal" v-model="enteredValue"/>
+        <input type="text" id="goal" v-model="enteredValue"
+        v-on:keypress="enter"/>
         <button v-on:click="addGoal">Add Goal</button>
+        <button v-on:click="delGoal">Clean Goal</button>
+        <ol>
+          <li v-for="(item,key,index) in goal" @click="goalDone" @dblclick="deshacer"></li>
+        </ol>
       </div>
     </div>
     <script src="app.js"></script>

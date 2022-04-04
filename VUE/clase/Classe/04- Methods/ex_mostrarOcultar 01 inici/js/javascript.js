@@ -12,6 +12,10 @@ const app = new Vue({
         url: "https://jdonsan.gitbooks.io/desarrolla-aplicaciones-con-vuejs/content/",
       },
       {
+        name: "Desarrolla aplicaciones con vueJs ",
+        url: "https://jdonsan.gitbooks.io/desarrolla-aplicaciones-con-vuejs/content/",
+      },
+      {
         name: "Curso de VUE",
         url: "https://styde.net/curso-de-vue-2/",
       },

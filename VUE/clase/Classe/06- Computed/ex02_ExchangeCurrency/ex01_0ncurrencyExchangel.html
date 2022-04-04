@@ -1,35 +1,70 @@
 <html>
-   <head>
-      <title>VueJs Instance</title>
-      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-   </head>
-   <body>
-      <style>
-         #databinding{
-            padding: 20px 15px 15px 15px;
-            margin: 0 0 25px 0;
-            width: auto;
-            background-color: #e7e7e7;
+
+<head>
+   <title>cambioMoneda</title>
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+
+
+</head>
+
+<body>
+   <style>
+      #databinding {
+         padding: 20px 15px 15px 15px;
+         margin: 0 0 25px 0;
+         width: auto;
+         background-color: #e7e7e7;
+      }
+
+      span, option, input {
+         font-size: 25px;
+      }
+   </style>
+
+   <div id="moneda">
+      <h1>Hola: {{cliente}} </h1>
+      <h1>Currency Converter</h1>
+      <span>Enter Amount:</span>
+      <input type="number" placeholder="Enter Amount" /><br /><br />
+      <span>Convert From:</span>
+      <select  style="width:300px;font-size:25px;">
+         <option v-for="moneda in currencyfrom" :value="moneda.name"> {{moneda.desc}} </option>
+      </select>
+      <span>Convert To:</span>
+      <select style="width:300px;font-size:25px;">
+         <option :value="moneda.name"> {{moneda.desc}} </option>
+      </select><br /><br />
+   </div>
+
+   <script>
+      var app = new Vue({
+         el: '#moneda',
+         data: {
+            cliente: 'Carmen Alida',
+            currencyfrom: 
+               [{
+                  name: "USD",
+                  desc: "US Dollar"
+               },
+               {
+                  name: "EUR",
+                  desc: "Euro"
+               },
+               {
+                  name: "INR",
+                  desc: "Indian Rupee"
+               },
+               {
+                  name: "BHD",
+                  desc: "Bahraini Dinar"
+               }
+            ],
+         //    convertfrom: "INR",
+         //    convertto: "USD",
+         //    amount :""
          }
-         span, option, input {
-            font-size:25px;
-         }
-      </style>
-      
-      <div id = "databinding" >
-         <h1>Benvinguda:</h1> 
-         <h1>Currency Converter</h1>         
-         <span>Enter Amount:</span>
-         <input type = "number"  placeholder = "Enter Amount" /><br/><br/>
-         <span>Convert From:</span>
-         <select style="width:300px;font-size:25px;">
-            <option value="from" >From</option>
-         </select>
-         <span>Convert To:</span>
-         <select v-model = "convertto" style = "width:300px;font-size:25px;">
-            <option value="to" >to</option>
-         </select><br/><br/>
-      </div>
-      
-   </body>
+      })
+   </script>
+</body>
+
 </html>

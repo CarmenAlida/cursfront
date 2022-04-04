@@ -1,0 +1,49 @@
+<html>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>computedPaises</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js'></script>
+</head>
+
+<body>
+
+
+    <div id="my-app">
+        <h1> {{mensaje}} </h1>
+        <ul>
+            <li v-for="(country, index) in countries" :value="index">{{country}} </li>
+        </ul>
+        filtro
+        <input type="text" v-model="country">
+        <ul>
+            <li v-for="(country, index) in countriesFiltrered" :value="index"> {{country}} </li>
+        </ul>
+    </div>
+    <script>
+        const app = new Vue({
+            el: '#my-app',
+            data() {
+                return {
+                    mensaje: 'lista de paises a elegir',
+                    country: '',
+                    countries: ['Alemania', 'USA', 'UK', 'España', 'Portugal']
+                }
+            },
+            computed: {
+                countriesFiltrered: function() {
+                    if (this.country === '') {
+                        return this.countries
+                    } else {
+                        // return this.countries.filter(element => element.toUpperCase()=== (this.country.toUpperCase()))
+                        return this.countries.filter(element => element.toUpperCase().includes(this.country
+                            .toUpperCase()))
+                    }
+                }
+            },
+        })
+    </script>
+</body>
+</html>
