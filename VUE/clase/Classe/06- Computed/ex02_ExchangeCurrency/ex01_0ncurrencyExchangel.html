@@ -1,48 +1,53 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>cambioMoneda</title>
    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-
-
 </head>
 
 <body>
    <style>
-      #databinding{
+      #databinding {
          padding: 20px 15px 15px 15px;
          margin: 0 0 25px 0;
          width: auto;
          background-color: #cec9c9;
       }
 
-      span, option, input {
+      span,
+      option,
+      input {
          font-size: 25px;
       }
    </style>
 
-   <div id= "databinding">
+   <div id="databinding">
       <h1>Hola: {{name}} </h1>
       <h1>Currency Converter</h1>
       <span>Enter Amount:</span>
-      <input type = "number" placeholder = "Enter Amount" /><br /><br />
+      <input type="number" v-model="amount" placeholder="Enter Amount" /><br /><br />
       <span>Convert From:</span>
-      <select  style="width:300px;font-size:25px;">
-         <option v-for = "moneda in currencyfrom" :value="moneda.name"> {{moneda.desc}} </option>
+      <select v-model="convertfrom" style="width:300px;font-size:25px;">
+         <option v-for="(elemento, index) in currencyfrom" :value="elemento.name"> {{elemento.desc}} </option>
       </select>
       <span>Convert To:</span>
-      <select style="width:300px;font-size:25px;">
-         <option value="to"> to </option>
+      <select v-model="convertto" style="width:300px;font-size:25px;">
+         <option v-for="(elemento, index) in currencyfrom" :value="elemento.name"> {{elemento.desc}} </option>
       </select><br /><br />
+      <span>{{amount}} {{convertfrom}} equals {{convertto}} {{finalamount}} </span>
    </div>
 
-   <script>
+   <script type="text/javascript">
       var app = new Vue({
          el: '#databinding',
-         data:{
-            name:'Carmen Alida',
-            currencyfrom: 
-               [{
+         data: {
+            name: 'Carmen Alida',
+
+            currencyfrom: [{
                   name: "USD",
                   desc: "US Dollar"
                },
@@ -57,13 +62,67 @@
                {
                   name: "BHD",
                   desc: "Bahraini Dinar"
-               }
+               },
             ],
-         //    convertfrom: "INR",
-         //    convertto: "USD",
-         //    amount :""
-         }
-      })
+            convertfrom: "INR",
+            convertto: "USD",
+            amount: 100,
+         },
+
+         computed: {
+            finalamount: function () {
+               var to = this.convertto;
+               var from = this.converfrom;
+               var final;
+               switch (from) {
+                  case "INR":
+                     if (to == "USD") {
+                        final = this.amount * 0.016;
+                     }
+                     if (to == "EUR") {
+                        final = this.amount * 0.013;
+                     }
+                     if (to == "BHD") {
+                        final = this.amount * 0.0059;
+                     }
+                     break;
+                  case "USD":
+                     if (to == "INR") {
+                        final = this.amount * 63.88;
+                     }
+                     if (to == "EUR") {
+                        final = this.amount * 0.84;
+                     }
+                     if (to == "BHD") {
+                        final = this.amount * 0.38;
+                     }
+                     break;
+                  case "EUR":
+                     if (to == "INR") {
+                        final = this.amount * 76.22;
+                     }
+                     if (to == "USD") {
+                        final = this.amount * 1.19;
+                     }
+                     if (to == "BHD") {
+                        final = this.amount * 0.45;
+                     }
+                     break;
+                  case "BHD":
+                     if (to == "INR") {
+                        final = this.amount * 169.44;
+                     }
+                     if (to == "USD") {
+                        final = this.amount * 2.65;
+                     }
+                     if (to == "EUR") {
+                        final = this.amount * 2.22;
+                     }
+               }
+               return final;
+            }
+         },
+      });
    </script>
 </body>
 
