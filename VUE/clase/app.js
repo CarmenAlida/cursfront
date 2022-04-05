@@ -16,11 +16,6 @@ const app = new Vue({
         mensajeHTML: 'Mi primer vue.js',
         imagen: "img/medanos.jpg",
         url: "https://www.uoc.edu/portal/es/index.html/",
-    },
-    methods: {
-        // creando una función
-        
-        
-    },
+    }
    });
     
