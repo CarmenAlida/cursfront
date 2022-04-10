@@ -15,7 +15,8 @@
          padding: 20px 15px 15px 15px;
          margin: 0 0 25px 0;
          width: auto;
-         background-color: #cec9c9;
+         background-color: #1a1663;
+         color: whitesmoke;
       }
 
       span,
@@ -72,7 +73,7 @@
          computed: {
             finalamount: function () {
                var to = this.convertto;
-               var from = this.converfrom;
+               var from = this.convertfrom;
                var final;
                switch (from) {
                   case "INR":
@@ -118,10 +119,29 @@
                      if (to == "EUR") {
                         final = this.amount * 2.22;
                      }
+                     break
                }
                return final;
-            }
-         },
+            },
+            convert() {
+					var to = this.convertto
+					var from = this.convertfrom
+					var final = "";
+					if (this.amount !== "") {
+						if (from === to) {
+							final = this.amount;
+						} else {
+							var money = this.currencyExchange[from]
+							money.forEach(element => {
+								if (element.to === to) {
+									final = (this.amount * element.rate).toFixed(2);
+								}
+							});
+						}
+					}
+					return final
+				}
+         }
       });
    </script>
 </body>
