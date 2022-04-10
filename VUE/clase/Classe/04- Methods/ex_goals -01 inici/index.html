@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-    <title>goal</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+<html lang="es">
 
-    <div id="app">
-      <div>
-        <label for="goal">Goal</label>
-        <input type="text" id="goal" v-model="enteredValue"
-        v-on:keypress="enter"/>
-        <button v-on:click="addGoal">Add Goal</button>
-        <button v-on:click="delGoal">Clean Goal</button>
-        <ol>
-          <li v-for="(item,key,index) in goal" @click="goalDone" @dblclick="deshacer"></li>
-        </ol>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A First App</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div>
+      <label for="goal">Goal</label>
+      <input type="text" id="goal" v-model="goalInput" v-on:keypress="enter" />
+      <button v-on:click="addGoal">Add Goal</button>
+      <button v-on:click="removeGoalAll">RemoveAll Goal</button>
+      <label for="find">Buscar</label>
+      <input type="text" id="find" v-model='find'>
+      <div v-for="goal in filteredGoal">
+        <div class='goal'>
+          <p @click="setDone" v-bind:data-id="goal.id" class="goal__title">{{ goal.goal }}</p>
+          <span @click="removeGolById" v-bind:data-id="goal.id" class='close'>X</span>
+        </div>
       </div>
     </div>
-    <script src="app.js"></script>
-  </body>
+  </div>
+  <script src="app.js"></script>
+</body>
+
 </html>

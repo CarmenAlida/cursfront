@@ -17,12 +17,18 @@ const app = new Vue({
       },
     ],    
     mostrar: true,
-    mensaje: "Benvingut a VUE",
+    mensaje: "Bienvenida a VUE",
     imagen: "img/vue.jpg",
+    num1: 0,
+    num2: 0,
+    total: "",
   },
   methods: {
-    toggleMostrar: function () {
+    toggleMostrar() {
       this.mostrar = !this.mostrar;
     },
+    mostrarnumeros(){
+      return(this.total = +this.num1 + this.num2)
+    },
   },
-});
+})

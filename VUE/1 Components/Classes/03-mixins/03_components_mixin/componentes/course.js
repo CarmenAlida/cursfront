@@ -78,8 +78,7 @@ const course = {
     `,
     methods: {
         add: function (months) {
-            this.$emit('add', { title: this.title, months: months,
-            price:this.price });
+            this.$emit('add', { title: this.title, months: months });
         }
     }
 };

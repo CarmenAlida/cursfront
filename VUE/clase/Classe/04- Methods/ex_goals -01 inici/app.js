@@ -1,16 +1,50 @@
-var vm = new Vue({
+const vm = new Vue({
     el: '#app',
     data: {
-        goals: [],
-        enteredValue: 'hola'
+      goal: [],
+      goalInput: '',
+      find: '',
+      count: 0,
     },
     methods: {
-        addGoal: function () {
-            console.log(this.goals);
-            console.log("Goal añadido" + this.enteredValue);
-            this.goals.push(this.enteredValue);
-            this.enteredValue = '';
+      addGoal() {
+        const objGoal = {
+          id: this.count++,
+          goal: this.goalInput,
         }
-    }    
-    
-})
+        this.goalInput
+          ? this.goal.push(objGoal)
+          : console.error('No puede estar vacio')
+  
+        this.goalInput = ''
+        console.log(this.goal)
+      },
+      removeGoalAll() {
+        this.goal.length = 0
+        this.goal = []
+        this.find = ''
+      },
+      removeGolById(e) {
+        const id = e.target.getAttribute('data-id')
+        this.goal.splice(id, 1)
+        this.find = ''
+      },
+      setDone(e) {
+        e.target.style.textDecoration = 'line-through'
+        e.target.style.backgroundColor = 'red'
+      },
+      enter(e) {
+        if (e.key === 'Enter') {
+          this.addGoal()
+        }
+      },
+    },
+    computed: {
+      filteredGoal() {
+        return this.goal.filter((goal) =>
+          goal.goal.toLowerCase().includes(this.find.toLowerCase())
+        )
+      },
+    },
+  })
+  

@@ -12,22 +12,23 @@
 
   <template id="ejemplo">
     <div>
+      <button @click="toggleMostrar">Mostrar/Ocultar</button>
       <div v-if="mostrar">
         <b>{{ mensaje }}</b>
-      </div>
-
-      <div v-if="mostrar">
         <img :src="imagen" />
       </div>
 
       <ul>
-        <li v-for="(curso, index) in cursos" :key="index">
-          <a :href="curso.url">{{ curso.name }}</a>
+        <li v-for="curso in cursos">
+          <a v-bind:href="curso.url">{{ curso.name }}</a>
         </li>
       </ul>
-      <button @click="toggleMostrar">Mostrar/Ocultar</button>
+      <button @click="mostrarnumeros">sumar</button>
+      <input type="number" v-model="num1">
+      <input type="number" v-model="num2">
+      <h4>suma {{num1}} + {{num2}} = {{total}} </h4>
     </div>
-  </template>  
+  </template>
 
   <!--OJO això ha d'estar aquí al final -->
   <script src="js/javascript.js"></script>

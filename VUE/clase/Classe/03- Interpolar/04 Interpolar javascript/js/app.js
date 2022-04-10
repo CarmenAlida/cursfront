@@ -3,7 +3,7 @@ const app = new Vue({
   template: "#ejemplo",
   imagen: "img/vue.jpg",
   data: {   
-    mensaje: "Benvingut a VUE",
+    mensaje: "Bievenida a este bello día",
     number: 10,
     ok:true,
   }  

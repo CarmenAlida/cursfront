@@ -3,8 +3,8 @@ const app = new Vue({
   template: "#ejemplo",
   imagen: "img/vue.jpg",
   data: {   
-    mensaje: "Això es un missatge sense format html",
-    mensajeHTML: "<b>Esto es un mensaje HTML</b>",
+    mensaje: "Hola que tal?",
+    mensajeHTML: "<b>trabajando con vue</b>",
     imagen: "img/vue.jpg",
   }  
 });
