@@ -23,6 +23,10 @@ var vm = new Vue({
           this.lname = "";
           this.addr = "";
           console.log(this.custdet);
-       }
-    }
+       },
+       eliminar: function (observaciones, index){
+          alert("eliminando registro" + index +" por: "+ observaciones)
+            this.custdet.splice(index, 1);
+       } 
+    },
  });

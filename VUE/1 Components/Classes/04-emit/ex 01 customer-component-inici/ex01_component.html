@@ -50,27 +50,16 @@
          width: 30%;
       }
    </style>
-
-
-
    <div id="databinding">
-      <h1>Detalles del cliente</h1>
+      <h1>Customer Details</h1>
       <span>First Name</span>
       <input type="text" placeholder="Enter First Name" v-model="fname" />
       <span>Last Name</span>
       <input type="text" placeholder="Enter Last Name" v-model="lname" />
       <span>Address</span>
       <input type="text" placeholder="Enter Address" v-model="addr" />
-      <button v-on:click="showdata" v-bind:style="styleobj">Add</button>
-      
+      <button v-on:click="showdata" >Add</button>
       <br /> <br />
-      
-      <customercomponent 
-      v-for="(item, index) in custdet" 
-      v-bind:index="index" 
-      v-bind:obj="item"
-      v-on:removeelement="eliminar($event, index)">
-      </customercomponent>     
    </div>
 
    <script type="text/javascript" src="app.js"></script>

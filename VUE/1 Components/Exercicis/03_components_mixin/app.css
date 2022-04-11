@@ -4,7 +4,6 @@ body {
 
 .marketplace {
     display: flex;
-    
 }
 
 .course {
@@ -76,14 +75,10 @@ body {
 .course.course-js .course-header,
 .course.course-js .course-footer button {
     background: #43A047;
-    
+    color: #FFFFFF;
 }
 
 .course.course-css .course-header,
 .course.course-css .course-footer button {
     background: #FDD835;
-}
-.course.course-vue .course-header,
-.course.course-vue .course-footer button {
-    background: red;
 }
