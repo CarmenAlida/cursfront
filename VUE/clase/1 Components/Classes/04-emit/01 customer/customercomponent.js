@@ -10,7 +10,7 @@ Vue.component('customercomponent',{
          <div class = "Cell"><p>
             <button v-on:click = "$emit('removeelement', observaciones)">X</button></p>
          </div>
-         <input v-model = "observaciones" type = "text">
+         <input placeholder="observaciones" v-model = "observaciones" type = "text">
       </div>
       </div>
     `,
