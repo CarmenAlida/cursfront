@@ -1,8 +1,10 @@
-# vue-first-app
+# todolist-app
+
+Live Staging: https://vuejs-todo-list-xi.vercel.app/
 
 ## Project setup
 ```
-npm run serve
+npm install
 ```
 
 ### Compiles and hot-reloads for development

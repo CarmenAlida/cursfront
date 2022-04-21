@@ -1,8 +1,8 @@
-# vue-first-app
+# proyecto1
 
 ## Project setup
 ```
-npm run serve
+npm install
 ```
 
 ### Compiles and hot-reloads for development
